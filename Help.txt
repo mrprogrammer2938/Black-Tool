@@ -1,0 +1,20 @@
+Installing:
+            
+            git clone https://github.com/mrprgrammer2938/Black-Tool
+            
+            cd Black-Tool
+            
+            ./install.sh
+            
+            hack --help
+------------------------------------------------------------------------------------------
+Updating:
+           
+           cd Update
+           
+           ./update
+
+------------------------------------------------------------------------------------------
+Uninstalling:
+              
+              ./uninstall
