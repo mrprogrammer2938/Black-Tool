@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+# This code write by Mr.nope
+echo "Updating..."
+sleep 2
+cd .. && sudo rm -r Black-Tool && git clone https://github.com/mrprogrammer2938/Black-Tool
+echo ""
+echo "Updating..., Finish...!"
+echo ""
+exit 1
