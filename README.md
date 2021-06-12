@@ -25,7 +25,24 @@ cd Black-Tool
 
 bash install.sh
 
-hack
+hack --help
+```
+
+## Working...
+```
+Black-Tool Usage:
+                  --start start Hack Menu!
+                  --install + pkg
+                  --clone + Repositories
+                  --version Black-Tool version
+                  --help + Black-Tool Help
+```
+
+### Update...
+```
+cd Update
+
+./update
 ```
 
 ###### Uninstalling
