@@ -10,6 +10,7 @@ sleep 2
 apt install python
 apt install python3
 chmod a+x hack
+chmod +x uninstall.sh
 sudo cp hack /usr/local/bin
 echo ""
 echo "Installing..., Finish...!""
