@@ -13,6 +13,6 @@ chmod a+x hack
 chmod +x uninstall.sh
 cp hack /usr/local/bin
 echo ""
-echo "Installing..., Finish...!""
+echo "Installing..., Finish...!"
 echo ""
 exit 1
