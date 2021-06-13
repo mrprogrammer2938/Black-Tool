@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # This code write by Mr.nope
-if [[ "$(id -u)"" -ne 0 ]]; then
+if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
 fi
@@ -11,7 +11,7 @@ apt install python
 apt install python3
 chmod a+x hack
 chmod +x uninstall.sh
-sudo cp hack /usr/local/bin
+cp hack /usr/local/bin
 echo ""
 echo "Installing..., Finish...!""
 echo ""
