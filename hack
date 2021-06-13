@@ -3,6 +3,7 @@
 import os
 import time
 import sys
+import platform
 try:
     import socket
 except ImportError:
@@ -31,6 +32,7 @@ class color:
     white_light = '\033[97m'
 opt = color.blue + "\nBlack-Tool~# " + color.End
 Black_menu_mass = color.green + "Exiting..." + color.End
+system = platform.uname()[0]
 ip = "\nEnter ip: "
 exm = "\nPlease, Enter Ip!"
 packet_2 = "\nEnter packet: "
