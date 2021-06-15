@@ -595,7 +595,7 @@ def black_tool_developer():
     cls()
     os.system("figlet -f slant Black-Tool|lolcat")
     print(color.green + "\nThis code write by " + color.blue + "Mr.nope" + color.End)
-    print(color.prlblue + "\nCode Name: " + color.red + "Black-Tool" + color.End)
+    print(color.prlblue + "\nProgramm Name: " + color.red + "Black-Tool" + color.End)
     print(color.red + "\nVersion: " + color.darkblue + "1.4.0" + color.End)
     print(color.org + "\nGithub: " + color.green + "https://github.com/mrprogrammer2938" + color.End)
     time.sleep(2)
