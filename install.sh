@@ -8,6 +8,9 @@ printf '\033]2;Installing\a'
 clear
 echo "Installing..."
 sleep 2
+apt install lolcat
+apt install python
+apt install python3
 chmod a+x hack
 chmod +x uninstall.sh
 cp hack /usr/bin
