@@ -177,7 +177,7 @@ def screen():
          ░███    ░███ ░███  ███░░███ ░███  ███ ░███░░███        ░███    ░███ ░███░███ ░███ ░███
          ███████████  █████░░████████░░██████  ████ █████       █████   ░░██████ ░░██████  █████
         ░░░░░░░░░░░  ░░░░░  ░░░░░░░░  ░░░░░░  ░░░░ ░░░░░       ░░░░░     ░░░░░░   ░░░░░░  ░░░░░  \n""" + color.org + """
-              ---[This code write by """ + color.line + "Mr.nope" + color.End + color.org + " ]----" + color.End)
+              ---[This code write by """ + color.End + color.line + "Mr.nope" + color.End + color.org + " ]----" + color.End)
 
 def black_webhacking():
     cls()
