@@ -10,6 +10,7 @@ echo "Installing..."
 sleep 2
 chmod a+x hack
 chmod +x uninstall.sh
+apt install xtitle
 apt install lolcat
 apt install python
 apt install python3
