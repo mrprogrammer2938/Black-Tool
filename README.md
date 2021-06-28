@@ -32,10 +32,10 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 - [Cam Hackers ang](https://github.com/AngelSecurityTeam/Cam-Hackers)
 - [Say-Cheese](https://github.com/keralahackers/saycheese)
 - [Say Master]((https://github.com/joshkar/SayMaster)
-- [Cam Phish](https://github.com/techchipnet/CamPhish/ Cam-Phish/)
+- [Cam Phish](https://github.com/techchipnet/CamPhish)
 
 #### Phishing
-- [setoolkit](https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/)
+- [setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
 - [zphisher](https://github.com/htr-tech/zphishe)
 - [nexphishier](https://github.com/htr-tech/nexphisher)
 - [Soial Phish](https://github.com/xHak9x/SocialPhish)
@@ -57,8 +57,8 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 - [Th3inspector]((https://github.com/Moham3dRiahi/Th3inspector)
 
 #### Social Engineer
-- [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/)
-- [Focial](https://github.com/v2-dev/awesome-social-engineering/ focial/)
+- [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
+- [Focial](https://github.com/v2-dev/awesome-social-engineering)
 - [Fluxion](https://github.com/FluxionNetwork/fluxion)
 - [Insta Hack](https://github.com/fuck3erboy/instahack)
 
@@ -74,8 +74,8 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 - [DDos-Attack](https://github.com/mrprogrammer2938/DDos-Attack)
 - [hammer](https://github.com/cyweb/hammer)
 - [LITEDDOS](https://github.com/4L13299/LITEDDOS)
-- [Raven](https://github.com/Taguar258/Raven-Storm/ Rave-Tool/)
-- [DDos-Attack-MRX](https://github.com/Ha3MrX/DDos-Attack/ DDos-Attack-Mrx/)
+- [Raven](https://github.com/Taguar258/Raven-Storm)
+- [DDos-Attack-MRX](https://github.com/Ha3MrX/DDos-Attack)
 
 
 **Installing**
