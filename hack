@@ -953,7 +953,7 @@ def black_Cam_Hacking():
     choose3 = input(opt)
     if choose3 == '1':
         cls()
-        os.system("git clone https://github.com/mrprogrammer2938")
+        os.system("git clone https://github.com/mrprogrammer2938/Cam-Hackers")
         try19()
     elif choose3 == '2':
         cls()
@@ -989,7 +989,7 @@ def black_Cam_Hacking_2():
     choose3 = input(opt)
     if choose3 == '1':
         cls()
-        os.system("git clone https://github.com/mrprogrammer2938")
+        os.system("git clone https://github.com/mrprogrammer2938/Cam-Hackers")
         try19()
     elif choose3 == '2':
         cls()
