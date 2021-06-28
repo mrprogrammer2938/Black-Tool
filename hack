@@ -34,18 +34,22 @@ import datetime
 import platform
 import requests
 try:
+    from colorama import Fore,init
+except ImportError:
+    os.system("pip3 install colorama");
+try:
     import socket
 except ImportError:
-    os.system("pip install socket")
+    os.system("pip install socket");
 try:
    import subprocess
 except ImportError:
-    os.system("pip install subprocess")
+    os.system("pip install subprocess");
 try:
     import ipapi
 except ImportError:
-    os.system("pip install ipapi")
-Black_Tool_Version = "\nBlack-Tool 1.4.0\n"
+    os.system("pip install ipapi");
+Black_Tool_Version = "\nBlack-Tool 1.5.0\n"
 user = subprocess.getoutput("whoami")
 black_Tool_date = subprocess.getoutput("date").replace("+0430","")
 packet = "\nEnter packet: "
@@ -148,6 +152,7 @@ def menu():
         print("\nCtrl + C")
         print(color.green + "\nExiting..." + color.End)
         sys.exit()
+# Menu 1.5.0
 def black():
     print("\n{1}.Black-Tool Attack")
     print("{2}.Black-Tool Shell")
@@ -382,7 +387,7 @@ def screen():
     print(color.green + """
          ███████████  ████                     █████         ███████████                   ████
         ░░███░░░░░███░░███                    ░░███         ░█░░░███░░░█                  ░░███
-         ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███ """ + color.red + "Version: " + color.blue + "1.4.0" + color.green + """
+         ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███ """ + color.red + "Version: " + color.blue + "1.5.0" + color.green + """
          ░██████████  ░███  ░░░░░███  ███░░███ ░███░░███        ░███     ███░░███ ███░░███ ░███
          ░███░░░░░███ ░███   ███████ ░███ ░░░  ░██████░         ░███    ░███ ░███░███ ░███ ░███
          ░███    ░███ ░███  ███░░███ ░███  ███ ░███░░███        ░███    ░███ ░███░███ ░███ ░███
