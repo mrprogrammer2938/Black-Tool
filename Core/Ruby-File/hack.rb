@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 # This code write by Mr.nope
 # Black-Tool
-# Version 1.4.0
+# Version 1.5.0
 def title()
     system("xtitle Black-Tool")
 end
