@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This code write by Mr.nope
 # Black-Tool Installing
-# Version 1.4.0
+# Version 1.5.0
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
