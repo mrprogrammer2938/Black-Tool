@@ -54,7 +54,7 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 - [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
 - [WebKiller](https://github.com/ultrasecurity/webkiller)
 - [Web Information](https://github.com/zahidin/web-information-gathering)
-- [Th3inspector]((https://github.com/Moham3dRiahi/Th3inspector)
+- [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)
 
 #### Social Engineer
 - [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
