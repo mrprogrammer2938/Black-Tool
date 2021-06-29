@@ -52,6 +52,8 @@ except ImportError:
 Black_Tool_Version = "\nBlack-Tool 1.5.0\n"
 user = subprocess.getoutput("whoami")
 black_Tool_date = subprocess.getoutput("date").replace("+0430","")
+Black_Tool_OS_Err = "\nError, Please Run This Programm on Linux or Mac!\n"
+BLack_Tool_OS_Err_2 = "\nError, Please Run This Programm on Linux or Mac!"\n
 packet = "\nEnter packet: "
 def check_internet_title():
     os.system("printf '\033]2;Black-Tool: Check-Internet\a'")
@@ -2036,7 +2038,14 @@ def try12():
          Black_Tool_Start()
 if __name__ == '__main__':
   try:
-     arg()
+     if system == 'Linux':
+            arg()
+     elif system == 'Windows':
+        print(Black_Tool_OS_ERR)
+     elif system == 'Mac':
+        arg()
+     else:
+        print(Black_Tool_OS_ERR_2)
   except IndexError:
       print("\nPlease, Usage: --help\n")
       sys.exit()
