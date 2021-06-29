@@ -1368,7 +1368,7 @@ def try18():
 def Developer():
     os.system("figlet -f slant Black-Tool|lolcat")
     print(color.green + "This code write by " + color.blue + "Mr.nope" + color.End)
-    print(color.red + "\nVersion: " + color.darkblue + "1.4.0" + color.End)
+    print(color.red + "\nVersion: " + color.darkblue + "1.5.0" + color.End)
     print(color.org + "Github: " + color.green + "https://github.com/mrprogrammer2938" + color.End)
     time.sleep(2)
     try25()
