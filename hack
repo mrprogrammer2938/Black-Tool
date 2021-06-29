@@ -2054,4 +2054,4 @@ if __name__ == '__main__':
       print("\nPlease, Usage: --help\n")
       sys.exit()
 cls()
-# Black-Tool 1.4.0
+# Black-Tool 1.5.0
