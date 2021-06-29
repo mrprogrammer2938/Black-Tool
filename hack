@@ -2040,12 +2040,16 @@ if __name__ == '__main__':
   try:
      if system == 'Linux':
             arg()
+            sys.exit()
      elif system == 'Windows':
         print(Black_Tool_OS_ERR)
+        sys.exit()
      elif system == 'Mac':
         arg()
+        sys.exit()
      else:
         print(Black_Tool_OS_ERR_2)
+        sys.exit()
   except IndexError:
       print("\nPlease, Usage: --help\n")
       sys.exit()
