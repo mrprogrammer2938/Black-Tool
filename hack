@@ -104,7 +104,7 @@ def check_internet(host="https://google.com"):
         cls()
         print("\nCheck Internet...\n")
         try:
-           internet = requests.get(host,timeout=12)
+           internet = requests.get(host,timeout=14)
            if internet.status_code == 200:
              try:
                  check_internet_title_Connected()
