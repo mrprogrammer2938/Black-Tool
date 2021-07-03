@@ -17,7 +17,7 @@ Install the tools and start hacking Attacking !
 
 This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 
-[![Python 3.9](https://img.shields.io/static/v1?label=<LABEL>&message=<MESSAGE>&color=<COLOR>)](https://www.python.org/downloads/)
+[![Python 3.9](https://img.shields.io/static/v1?label=Python 3.9&message=3.9.0&color=<COLOR>)](https://www.python.org/downloads/)
 ## Web
 [Black Tool](https://60d8dc3633fbe.mywebzi.ir/)
 #### Scr
