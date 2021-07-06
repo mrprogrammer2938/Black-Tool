@@ -20,6 +20,7 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 [![Python 3.9](https://img.shields.io/static/v1?label=Python&message=3.9.0&color=green)](https://www.python.org/downloads/)        [![Python 3.5](https://img.shields.io/static/v1?label=Python&message=3.5.0&color=green)](https://www.python.org/downloads/release/python-357/)
 ## Web
 [Black Tool](https://60d8dc3633fbe.mywebzi.ir/)
+
 #### Scr
 [![Black-Tool-Scr-1](https://user-images.githubusercontent.com/78996423/121770983-e057c400-cb81-11eb-95ab-cbfb052b29a2.jpeg)](https://github.com/mrprogrammer2938/Black-Tool)
 
@@ -43,6 +44,9 @@ Black-Tool Usage:
                   --version Black-Tool version
                   --help + Black-Tool Help
 ```
+
+*Start*
+```hack --start```
 
 ### Update...
 ```
