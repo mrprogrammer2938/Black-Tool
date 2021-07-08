@@ -72,6 +72,6 @@ cd Update
 
 [Pinterest](https://www.pinterest.com/mrprogrammer2938)
 
-[![image-asset](https://user-images.githubusercontent.com/78996423/124937508-b24c8f00-e01c-11eb-8ba6-f788e2f9a4d1.jpeg)]((https://www.buymeacoffee.com/Mr.nope)
+[![image-asset](https://user-images.githubusercontent.com/78996423/124937508-b24c8f00-e01c-11eb-8ba6-f788e2f9a4d1.jpeg)](https://www.buymeacoffee.com/Mr.nope)
 
 
