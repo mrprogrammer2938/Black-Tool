@@ -74,4 +74,6 @@ cd Update
 
 [![image-asset](https://user-images.githubusercontent.com/78996423/124937508-b24c8f00-e01c-11eb-8ba6-f788e2f9a4d1.jpeg)](https://www.buymeacoffee.com/Mr.nope)
 
+#### Comming soon... ;)
 
+[![Black-Tool v2.0.0](https://img.shields.io/badge/Black%20Tool-v2.0.0-green)](https://60e8de072a45a.mywebzi.ir/)
