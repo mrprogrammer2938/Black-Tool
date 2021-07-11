@@ -79,6 +79,12 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 - [Raven](https://github.com/Taguar258/Raven-Storm)
 - [DDos-Attack-MRX](https://github.com/Ha3MrX/DDos-Attack)
 
+#### Sniffing Spoofing
+- [Say Cheese](https://github.com/hangetzzu/saycheese)
+- [Say Master](https://github.com/joshkar/SayMaster)
+- [Soial-Enginner-Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
+
+
 **Installing**
 ```
 git clone https://github.com/mrprogrammer2938/ Black-Tool
