@@ -2748,8 +2748,6 @@ if __name__ == '__main__':
      elif system == 'Windows':
          print(Black_Tool_OS_Err)
          sys.exit()
-     elif system == 'Mac':
-         arg()
      else:
          print(Black_Tool_OS_Err)
   except IndexError:
