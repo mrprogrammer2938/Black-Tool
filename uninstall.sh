@@ -8,6 +8,9 @@ clear
 echo "Uninstalling..."
 sleep 2
 cd .. && rm -r Black-Tool && cd /usr/bin && rm -r hack
-echo "Installing..., Finish...!"
+echo ""
+echo "Finish...!"
+echo ""
+echo "Mr.nope: Good bye °^° "
 echo ""
 exit 1
