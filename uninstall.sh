@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # This code write by Mr.nope
-# Black-Tool 2.1.4
+# Black-Tool 2.1.5
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
