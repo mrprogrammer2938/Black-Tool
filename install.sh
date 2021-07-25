@@ -41,26 +41,48 @@ echo ""
       try1
   fi
 }
-clear
-printf '\033]2;Starting\a'
-echo "Starting..."
-sleep 2
-try1
-printf '\033]2;Installing...\a'
-echo "Installing..."
-sleep 2
-chmod +x uninstall.sh
-apt install xtitle
-apt install lolcat
-apt install python
-apt install python3
-printf "Press any key To continue..."
-read -n 1
-echo ""
-echo "Finish...!
+run() {
+    clear
+    printf '\033]2;Starting\a'
+    echo "Starting..."
+    sleep 2
+    try1
+    printf '\033]2;Installing...\a'
+    echo "Installing..."
+    sleep 2
+    chmod +x uninstall.sh
+    apt install xtitle
+    apt install lolcat
+    apt install python
+    apt install python3
+    printf "Press any key To continue..."
+    read -n 1
+    echo ""
+    echo "Finish...!
 
 Usage:
        hack --help
        "
-echo ""
-exit 1
+    echo ""
+    exit 1
+}
+check() {
+      printf '\033]2;Black-Tool/Installing/Check-Internet\a'
+      clear
+      echo "Checking Internet..."
+      sleep 1
+      ping -w 1 google.com > /dev/null
+      if [[ "$?" != 0 ]]; then
+         clear
+         echo "
+Please, Check Internet!
+"
+         exit 1
+      else
+          clear
+          echo "Internet Connected!"
+          sleep 2
+          run
+      fi
+}
+check
