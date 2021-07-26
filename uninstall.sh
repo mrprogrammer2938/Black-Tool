@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# This code write by Mr.nope
+# This code write by Mr.Programmer2938
 # Black-Tool 2.1.5
 # Uninstalling
 if [[ "$(id -u)" -ne 0 ]]; then
