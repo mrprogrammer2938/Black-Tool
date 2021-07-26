@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This code write by Mr.nope
+# This code write by Mr.Programmer2938
 # Black-Tool Installing
 # Version 2.1.5
 if [[ "$(id -u)" -ne 0 ]]; then
