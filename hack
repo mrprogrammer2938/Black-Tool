@@ -37,7 +37,6 @@ import subprocess
 import platform
 import requests
 import webbrowser
-from Version import version
 try:
     from colorama import Fore,init
     init()
