@@ -1,10 +1,22 @@
 #!/usr/bin/bash
 # This code write by Mr.nope
-clear
-echo "Updating..."
-sleep 2
-cd .. && cd .. && sudo rm -r Black-Tool && git clone https://github.com/mrprogrammer2938/Black-Tool
-echo ""
-echo "Updating..., Finish...!"
-echo ""
-exit 1
+# Black-Tool v2.2.5
+if [[ "$(id -u)" -ne 0 ]]; then
+  echo "
+Please, Run This Programm as Root!
+"
+  exit 1
+fi
+function main() {
+       clear
+       echo "Updating..."
+       sleep 2
+       cd .. && cd .. && sudo rm -r Black-Tool && git clone https://github.com/mrprogrammer2938/Black-Tool
+       echo ""
+       echo "
+Updating..., Finish...!
+
+"
+       exit 1
+}
+main
