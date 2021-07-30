@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This code write by Mr.Programmer2938
 # Black-Tool Installing
-# Version 2.4.5
+# Version 2.6.5
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
@@ -51,6 +51,8 @@ run() {
     echo "Installing..."
     sleep 2
     chmod +x uninstall.sh
+    apt-get update
+    apt-get upgrade
     apt install xtitle
     apt install lolcat
     apt install python
