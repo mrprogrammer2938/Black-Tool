@@ -1,0 +1,6 @@
+pyttsx3
+colorama
+cryptography
+pybluez
+googlesearch-python
+ipapi
