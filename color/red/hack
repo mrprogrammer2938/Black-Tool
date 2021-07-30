@@ -48,6 +48,7 @@ try:
     import pyttsx3 as pt
 except ImportError:
     os.system("pip install pyttsx3")
+    import pyttsx3 at pt
 try:
     import bluetooth
 except ImportError:
@@ -112,7 +113,7 @@ class color:
     white_light = '\033[97m'
 # ----------------------------------------------
 Black_Tool_Search_Err = color.red + "Error, " + color.green + "Please Check URL!" + color.End
-Black_Tool_Version = color.red + "2.6.5" + color.End
+Black_Tool_Version = "2.6.5"
 opt_shell = color.line + "Black-Tool" + color.End + "/ ~# "
 opt_cmd = color.line + "Black-Tool" + color.green + "/> " + color.End
 Black_Tool_OS_Err = "\nError, Please Try again!\n"
