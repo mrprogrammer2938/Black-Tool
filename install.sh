@@ -15,13 +15,14 @@ try1() {
   printf '\033]2;Black-Tool-Installing/color\a'
   clear
   echo "" 
-echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ 2.2.5"
+echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ 2.6.5"
 echo " █▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄"
 echo ""
   echo "color:
      {1}.red
      {2}.green
      {3}.blue
+     {4}.None
      {99}.Exit
      "
   printf 'Enter color: '
@@ -29,11 +30,18 @@ echo ""
   if [[ "$color" == "1" ]]; then
       cd color/red/ && chmod a+x hack
       cp hack /usr/bin
+      cp hack /usr/local/bin
   elif [[ "$color" == "2" ]]; then
       cd color/green/ && chmod a+x hack
       cp hack /usr/bin
+      cp hack /usr/local/bin
   elif [[ "$color" == "3" ]]; then
       cd color/blue/ && chmod a+x hack
+      cp hack /usr/bin
+      cp hack /usr/local/bin
+  elif [[ "$color" == "4" ]]; then
+      chmod +x hack
+      cp hack /usr/local/bin
       cp hack /usr/bin
   elif [[ "$color" == "99" ]]; then
       ext
