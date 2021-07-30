@@ -48,6 +48,7 @@ try:
     import pyttsx3 as pt
 except ImportError:
     os.system("pip install pyttsx3")
+    import pyttsx3 as pt
 try:
     import bluetooth
 except ImportError:
