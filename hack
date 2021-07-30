@@ -35,6 +35,7 @@ import sys
 import datetime
 import subprocess
 import platform
+import socket
 import requests
 import webbrowser
 system = platform.uname()[0]
@@ -47,10 +48,6 @@ try:
     import pyttsx3 as pt
 except ImportError:
     os.system("pip install pyttsx3")
-try:
-    import socket
-except ImportError:
-    command("pip3 install socket");
 try:
     import bluetooth
 except ImportError:
@@ -73,7 +70,7 @@ except ImportError:
 Black_Tool_info = {
     "Developer":"Sina Meysami",
     "CodeName":"Black-Tool",
-    "Version":"2.4.5",
+    "Version":"2.6.5",
     "Home":"https://github.com/mrprogrammer2938"
 }
 Black_Tool_du = dumps(Black_Tool_info)
