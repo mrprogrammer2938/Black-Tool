@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # This code write by Mr.Programmer2938
-# Black-Tool 2.4.5
+# Black-Tool 2.6.5
 # Uninstalling
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
@@ -11,8 +11,8 @@ function main() {
         echo "Uninstalling..."
         sleep 2
         cd .. && rm -r Black-Tool && cd /usr/bin && rm -r hack
-        echo ""
         echo "
+  
   Finish...!
   "
         echo "
