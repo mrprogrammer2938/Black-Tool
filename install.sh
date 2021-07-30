@@ -53,6 +53,7 @@ run() {
     chmod +x uninstall.sh
     apt-get update
     apt-get upgrade
+    apt install alsa-utils
     apt install xtitle
     apt install lolcat
     apt install python
