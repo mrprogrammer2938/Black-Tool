@@ -85,7 +85,7 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 #### Sniffing Spoofing
 - [Say Cheese](https://github.com/hangetzzu/saycheese)
 - [Say Master](https://github.com/joshkar/SayMaster)
-- [Soial-Enginner-Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
+- [Social-Enginner-Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
 
 
 **Installing**
