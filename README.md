@@ -1,5 +1,4 @@
-# <a style="color: green;" title="Black-Tool" href="https://github.com/mrprogrammer2938/Black-Tool">
-Black-Tool</a><br>
+# [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool)
 <br>
 <!--
 Black-Tool
