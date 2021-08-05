@@ -5,7 +5,7 @@ Black-Tool</a><br>
 Black-Tool
 -->
 <center>
-<a title="Black-Tool Logo" href="https://github.com/mrprogrammer2938/Black-Tool" target="_blank">
+<a href="https://github.com/mrprogrammer2938/Black-Tool" target="_blank">
   <img src="Black-Tool-Logo.jpeg" width="350" alt="Black-Tool logo">
   </a>
 </center><br>
