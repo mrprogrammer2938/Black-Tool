@@ -3,6 +3,6 @@
 
 **Usage**
 ```
-./update.py
+./update
 ```
 <br>
