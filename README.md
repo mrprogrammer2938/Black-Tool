@@ -149,6 +149,13 @@ Black-Tool v2.6.5
 --->
 
 ###### [Black-Tool](https://github.com/Black-Tool/Black-Tool) v3.0.0 Coming Soon ＼（〇_ｏ）／
+<br>
+
+###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Windows) For Windows
+<br>
+
+###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Termux) For Termux
+<br>
 
 #### [Github.Io](https://mrprogrammer2938.github.io/Black-Tool)
 <br>
