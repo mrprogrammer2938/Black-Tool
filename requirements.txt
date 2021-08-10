@@ -4,3 +4,5 @@ cryptography
 pybluez
 googlesearch-python
 ipapi
+soundplay
+deep_translator
