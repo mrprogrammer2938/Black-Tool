@@ -8,13 +8,22 @@ Installing:
             
             hack --help
 ------------------------------------------------------------------------------------------
+Argument:
+    Black-Tool Usage:
+                  --start start Hack Menu!
+                  --install + pkg
+                  --clone + Repositories
+                  --version Black-Tool version
+                  --help + Black-Tool Help
+                  --banner | Show Black-Tool Banner
+-------------------------------------------------------------------------------------------
 Updating:
            
            cd Update
            
            ./update
 
-------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 Uninstalling:
               
               ./uninstall
