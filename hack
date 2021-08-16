@@ -493,7 +493,6 @@ def menu():
         print("\n{}Exiting... {}".format(color.green,color.End))
         sys.exit()
 # Menu 3.0.0
-# Black-Tool Run Password
 def black():
     n_f = getpass.getuser()
     print(f"\nHi {n_f}, How Can I Help You?\n")
