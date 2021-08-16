@@ -269,7 +269,7 @@ Black_Tool_info = {
 Black_Tool_du = dumps(Black_Tool_info)
 Black_Tool_lo = loads(Black_Tool_du)
 Black_Tool_Version = "\nBlack-Tool 3.0.0\n"
-user = subprocess.getoutput("whoami")
+user = getpass.getuser()
 info = Black_Tool_lo
 black_Tool_date = subprocess.getoutput("date").replace("+0430","")
 Black_Tool_cmd_help = """
@@ -469,29 +469,7 @@ def music_pl():
     else:
         print("\n")
         playsound(music_n)
-        c = 0
-        s = 0
-        host = "https://google.com"
-        check_internet_title()
-        cls()
-        print("\nCheck Internet...\n")
-        internet = requests.get(host,timeout=14)
-        if internet.status_code == 200:
-          check_internet_title_Connected()
-          print("Internet Connected!\n")
-          time.sleep(1)
-          print("\nSet on System....\n");
-          print("\n")
-          while c <= 4:
-              sys.stdout.write("\x1b[1A\x1b[2k")
-              print(f"Start at: {s}")
-              time.sleep(1)
-              s += 1
-              c += 1
-              if s == 4:
-                 time.sleep(1)
-                 user_os_info()
-                 pass
+        start_2()
 def ext():
     cls()
     print("""
@@ -501,7 +479,7 @@ def ext():
 def menu():
     try:
         try:
-            # pt.speak("Black-Tool")
+            pt.speak("Black-Tool")
             title()
             cls()
             screen()
