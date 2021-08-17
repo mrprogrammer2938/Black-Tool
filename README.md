@@ -1,4 +1,4 @@
-# <center> <a href="https://github.com/mrprogrammer2938/Black-Tool" > <p title="Black-Tool" style="color: green;"> Black-Tool </p> </a> </center>
+# <center> <a href="https://github.com/mrprogrammer2938/Black-Tool"> <p title="Black-Tool" style="color: green;"> Black-Tool </p> </a> </center>
 <br>
 <!--
 Black-Tool 3.0.0
@@ -104,7 +104,7 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 **Installing**
 
 <pre title="Installing">
-git clone https://github.com/mrprogrammer2938/ Black-Tool
+git clone <span style="color: green;"> https://github.com/mrprogrammer2938/Black-Tool</span>
 
 cd Black-Tool
 
