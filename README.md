@@ -104,7 +104,7 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 **Installing**
 
 <pre title="Installing">
-git clone <span style="color: green;"> https://github.com/mrprogrammer2938/Black-Tool</span>
+git clone https://github.com/mrprogrammer2938/Black-Tool
 
 cd Black-Tool
 
