@@ -146,17 +146,15 @@ cd Update
 
 ##### What is Black-Tool?
 [Read](https://github.com/mrprogrammer2938/Black-Tool-Read)...
-
 <!---
 Black-Tool v3.0.0
 --->
+
 ###### [Black-Tool] (https://github.com/Black-Tool/Black-Tool) v3.0.0
 
 ###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Windows) For Windows
-<br>
 
 ###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Termux) For Termux
-<br>
 
 #### [Github.Io](https://mrprogrammer2938.github.io/Black-Tool)
 <br>
