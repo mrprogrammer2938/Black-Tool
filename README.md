@@ -150,7 +150,7 @@ cd Update
 Black-Tool v3.0.0
 --->
 
-###### [Black-Tool] (https://github.com/Black-Tool/Black-Tool) v3.0.0
+###### [Black-Tool](https://github.com/Black-Tool/Black-Tool) v3.0.0
 
 ###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Windows) For Windows
 
