@@ -479,7 +479,7 @@ def ext():
 def menu():
     try:
         try:
-            pt.speak("Black-Tool")
+            # pt.speak("Black-Tool")
             title()
             cls()
             screen()
