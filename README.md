@@ -113,12 +113,12 @@ bash install.sh
 hack --help
 </pre>
 
-## Working...
+## Help
 <br>
 
 ``` 
 Black-Tool Usage:
-                  --start start Hack Menu!
+                  --start | start Hack Menu!
                   --install + pkg
                   --clone + Repositories
                   --version Black-Tool version
