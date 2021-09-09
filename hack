@@ -409,7 +409,7 @@ def user_run():
         quit
 def pass_login():
     try:
-        file_pass = open("C:\Program Files\b-pass\pass.txt","r").read()
+        file_pass = open("c:\Program Files\b-pass\pass.txt","r").read()
         print("{1}.Forgot Password!\n")
         password_b = getpass.getpass("\nEnter Password: ")
         if password_b == file_pass:
@@ -3939,3 +3939,10 @@ if __name__ == '__main__':
       time.sleep(0.15)
       sys.exit()
 # Black-Tool 3.0.0
+'''
+--------------------------------------
+If you want to help update, fork     |
+--------------------------------------
+
+Mr.Programmer238: thanks for using :)
+'''
