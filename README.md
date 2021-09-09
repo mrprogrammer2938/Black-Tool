@@ -101,7 +101,7 @@ This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 - [Social-Enginner-Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
 <br>
 
-**Installing**
+**Installing For (Bash)**
 
 <pre title="Installing">
 git clone https://github.com/mrprogrammer2938/Black-Tool
@@ -112,6 +112,20 @@ bash install.sh
 
 hack --start
 </pre>
+<br>
+
+**Installing For (Zsh)**
+
+<pre title="Installing">
+git clone https://github.com/mrprogrammer2938/Black-Tool
+
+cd Black-Tool
+
+bash install.sh
+
+python3 hack --start
+</pre>
+<br>
 
 ## Argument Help
 <br>
