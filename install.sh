@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This code write by Mr.Programmer2938
-# Black-Tool Installing
-# Version 2.6.5
+# Black-Tool Installing File
+# Version 3.0.0
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
@@ -72,7 +72,7 @@ run() {
     echo "Finish...!
 
 Usage:
-       hack --help
+       hack --start
        "
     echo ""
     exit 1
