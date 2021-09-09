@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # This code write by Mr.nope
+# Mr.Nope = Mr.Programmer2938
 # Version 3.0.0 New... ;)
 # Github: https://github.com/mrprogrammer2938
 # Instagram: https://instagram.com/programmer2938
