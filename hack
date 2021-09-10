@@ -599,21 +599,21 @@ def black():
         Black_Tool_Command()
     elif choose == '99':
         ext()
-    elif choose == 'exit':
+    elif choose.lower() == 'exit':
         ext()
-    elif choose == 'quit':
+    elif choose.lower() == 'quit':
         ext()
-    elif choose == 'banner':
+    elif choose.lower() == 'banner':
         cls()
         banner()
         try25()
-    elif choose == 'cls':
+    elif choose.lower() == 'cls':
         black_2()
-    elif choose == 'clear':
+    elif choose.lower() == 'clear':
         black_2()
-    elif choose == 'back':
+    elif choose.lower() == 'back':
         menu()
-    elif choose == 'version':
+    elif choose.lower() == 'version':
         print(Black_Tool_Version)
         try64()
     elif choose == '':
@@ -731,21 +731,21 @@ def black_2():
         Black_Tool_Command_2()
     elif choose == '99':
         ext()
-    elif choose == 'exit':
+    elif choose.lower() == 'exit':
         ext()
-    elif choose == 'quit':
+    elif choose.lower() == 'quit':
         ext()
-    elif choose == 'banner':
+    elif choose.lower() == 'banner':
         cls()
         banner()
         try36()
-    elif choose == 'cls':
+    elif choose.lower() == 'cls':
         black_2()
-    elif choose == 'clear':
+    elif choose.lower() == 'clear':
         black_2()
-    elif choose == 'back':
+    elif choose.lower() == 'back':
         menu()
-    elif choose == 'version':
+    elif choose.lower() == 'version':
         print(Black_Tool_Version)
         try65()
     else:
