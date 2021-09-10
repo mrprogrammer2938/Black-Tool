@@ -54,11 +54,11 @@ run() {
     printf '\033]2;Starting\a'
     echo "Starting..."
     sleep 2
+    chmod +x uninstall.sh
     try1
     printf '\033]2;Installing...\a'
     echo "Installing..."
     sleep 2
-    chmod +x uninstall.sh
     apt-get update
     apt-get upgrade
     apt install alsa-utils
