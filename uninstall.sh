@@ -10,7 +10,7 @@ function main() {
         clear
         echo "Uninstalling..."
         sleep 2
-        cd .. && rm -r Black-Tool && cd /usr/bin && rm hack && cd /usr/local/bin && rm hack
+        cd .. && rm -r Black-Tool && cd C:\Program Files\b-pass\ && rm pass.txt && cd /usr/bin && rm hack && cd /usr/local/bin && rm hack
         echo "
   
   Finish...!
