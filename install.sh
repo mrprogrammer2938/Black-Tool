@@ -15,7 +15,7 @@ try1() {
   printf '\033]2;Black-Tool-Installing/color\a'
   clear
   echo "" 
-echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ 2.6.5"
+echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ 3.0.0"
 echo " █▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄"
 echo ""
   echo "color:
@@ -54,6 +54,7 @@ run() {
     printf '\033]2;Starting\a'
     echo "Starting..."
     sleep 2
+    chmod +x hack
     chmod +x uninstall.sh
     try1
     printf '\033]2;Installing...\a'
