@@ -31,7 +31,7 @@ Black-Tool ابزار
 
 This code write by [Mr.nope](https://github.com/mrprogrammer2938)
 
-Black tool version 4.0.0 is coming soon
+Black tool version 4.0.0 is coming soon (～￣▽￣)～
 
 #### Scr
 <br>
