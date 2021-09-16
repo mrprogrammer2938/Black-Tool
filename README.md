@@ -2,8 +2,6 @@
 <br>
 <!--
 Black-Tool 3.0.0
-
-Black tool version 4.0.0 is coming soon
 -->
 <center>
 <a href="https://mrprogrammer2938.github.io/Black-Tool" target="_blank">
