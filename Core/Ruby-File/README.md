@@ -15,6 +15,6 @@ hack
 #### Black-Tool For Windows
 <br>
 
-[Black-Tool](https://github.com/mrprogrammer2938/Black-Tool)
+[Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Windows)
 <br>
 
