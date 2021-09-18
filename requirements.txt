@@ -1,8 +1,10 @@
 pyttsx3
-colorama
+colorama==0.0.4
 cryptography
 pybluez
 googlesearch-python
 ipapi
-soundplay
+playsound
 deep_translator
+tk-tools
+PIL
