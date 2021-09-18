@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # This Programm Write by Mr.nope
 # Uninstall File
+# Version 4.0.0
 from banner import banner
 import os
 import time
