@@ -3,7 +3,7 @@
 <!--
 Black-Tool 4.0.0
 -->
-<link rel='icon' href=''>
+<link rel='icon' href='Black-Tool-Logo.jpeg'>
 <center>
 <a href="https://mrprogrammer2938.github.io/Black-Tool" target="_blank">
   <img src="Black-Tool-Logo.jpeg" width="350" alt="Black-Tool logo">
