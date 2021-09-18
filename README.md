@@ -1,7 +1,7 @@
 # Black-Tool
 <br>
 <!--
-Black-Tool 3.0.0
+Black-Tool 4.0.0
 -->
 <center>
 <a href="https://mrprogrammer2938.github.io/Black-Tool" target="_blank">
@@ -10,7 +10,7 @@ Black-Tool 3.0.0
 </center><br>
 
 
-```Black-Tool 3.0.0```
+```Black-Tool 4.0.0 (New)```
 <hr>
 
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-yellow.svg)](https://www.python.org/downloads/)   [![Python 3.5](https://img.shields.io/static/v1?label=python&message=3.5&color=red)](https://www.python.org/downloads/)<br>
@@ -31,8 +31,6 @@ Black-Tool ابزار
 ```
 
 This code write by [Mr.nope](https://github.com/mrprogrammer2938)
-
-Black tool version 4.0.0 is coming soon (～￣▽￣)～
 
 #### Scr
 <br>
@@ -142,6 +140,7 @@ Black-Tool Usage:
                   --version | Black-Tool version
                   --help    | Black-Tool Help
                   --banner  | Show Black-Tool Banner
+                  --scan portscan | dos
 ```
 
 ### Update...
@@ -165,14 +164,11 @@ cd Update
 ##### What is Black-Tool?
 [Read](https://github.com/mrprogrammer2938/Black-Tool-Read)...
 <!---
-Black-Tool v3.0.0
+Black-Tool v4.0.0
 --->
+<br>
 
 ###### [Black-Tool](https://github.com/Black-Tool/Black-Tool) v2.6.5
-
-###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Windows) For Windows
-
-###### [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool-Termux) For Termux
 
 #### [Github.Io](https://mrprogrammer2938.github.io/Black-Tool)
 <br>
