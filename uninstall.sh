@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This code write by Mr.Programmer2938
-# Black-Tool 3.0.0
+# Black-Tool 4.0.0
 # Uninstalling File
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
