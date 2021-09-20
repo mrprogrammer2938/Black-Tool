@@ -6,14 +6,18 @@ import os
 import webbrowser
 import subprocess
 import ctypes
-import requests
 import datetime
 import platform
 try:
     from tkinter import *
+    from tkinter import Radiobutton
     from tkinter.ttk import *
 except ImportError:
     os.system("pip install tk-tools")
+try:
+    import requests
+except ImportError:
+    os.system("pip install requests")
 
 time_zone = datetime.datetime.now()
 
@@ -27,7 +31,7 @@ class black_tool(object):
         # photo = PhotoImage(file = '')
         choose = Label(self.root,text='Please, Choose Banner Color:',foreground='green',background='black')
         choose.grid()
-        choose.place(bordermode=OUTSIDE,x=150,y=60)
+        choose.place(bordermode=OUTSIDE,x=150,y=30)
 
         menu = Menu(self.root)
 
@@ -46,29 +50,27 @@ class black_tool(object):
         global blue
 
         ch = IntVar()
-        ch.get()
-        green = Checkbutton(self.root,text='Green',state='enable',variable=ch)
-        green.grid()
-        green.place(bordermode=INSIDE,x=190,y=90)
 
-        ch1 = IntVar()
-        red = Checkbutton(self.root,text='Red',state='enable',variable=ch1)
+        green = Radiobutton(self.root,text='Green',variable=ch,value=1)
+        green.grid()
+        green.place(bordermode=OUTSIDE,x=190,y=60)
+
+        red = Radiobutton(self.root,text='Red',variable=ch,value=2)
         
         red.grid()
-        red.place(bordermode=INSIDE,x=190,y=120)
+        red.place(bordermode=OUTSIDE,x=190,y=85)
 
-        ch2 = IntVar()
-        blue = Checkbutton(self.root,text='Blue',state='enable',variable=ch2)
+        blue = Radiobutton(self.root,text='Blue',variable=ch,value=3)
         blue.grid()
-        blue.place(bordermode=INSIDE,x=190,y=150)
+        blue.place(bordermode=OUTSIDE,x=190,y=110)
         
         click = Button(self.root,text='Start',command=self.start_program)
         click.grid()
-        click.place(bordermode=OUTSIDE,x=175,y=180)
+        click.place(bordermode=OUTSIDE,x=175,y=150)
 
         exit = Button(self.root,text='Exit',command=self.ext)
         exit.grid()
-        exit.place(bordermode=OUTSIDE,x=175,y=215)
+        exit.place(bordermode=OUTSIDE,x=175,y=180)
 
         self.root.configure(background='black')
         # self.root.iconphoto(False,photo)
@@ -77,25 +79,27 @@ class black_tool(object):
         self.root.mainloop()
 
     def start_program(self):
+        global banner_color
         global label_installing
         global label_installing_2
         global label_installing_3
-        if ch:
+        banner_color = ch.get()
+        if banner_color == 1:
             label_installing = Label(self.root,text='Installing...',foreground='green',background='black')
             label_installing.grid()
-            label_installing.place(bordermode=OUTSIDE,x=175,y=245)
+            label_installing.place(bordermode=OUTSIDE,x=175,y=220)
             subprocess.getoutput(f'cd color/green/ && cp hack /usr/local/bin')
             label_installing.after(2000,self.black_tool_installing_mess)
-        elif ch1:
+        elif banner_color == 2:
             label_installing_2 = Label(self.root,text='Installing...',foreground='green',background='black')
             label_installing_2.grid()
-            label_installing_2.place(bordermode=OUTSIDE,x=175,y=245)
+            label_installing_2.place(bordermode=OUTSIDE,x=175,y=220)
             subprocess.getoutput(f'cd color/red/ && cp hack /usr/local/bin')
             label_installing_2.after(2000,self.black_tool_installing_mess)
-        elif ch2:
+        elif banner_color == 3:
             label_installing_3 = Label(self.root,text='Installing...',foreground='green',background='black')
             label_installing_3.grid()
-            label_installing_3.place(bordermode=OUTSIDE,x=175,y=245)
+            label_installing_3.place(bordermode=OUTSIDE,x=175,y=220)
             subprocess.getoutput(f'cd color/blue/ && cp hack /usr/local/bin')
             label_installing_3.after(2000,self.black_tool_installing_mess)
         else:
@@ -107,26 +111,26 @@ class black_tool(object):
 
 
     def black_tool_developer(self):
-        webbrowser.open_new_tab('')
+        webbrowser.open_new_tab('https://github.com/mrprogrammer2938/Black-Tool/tree/master/Developer')
 
     def black_tool_help(self):
-        webbrowser.open_new_tab('')
+        webbrowser.open_new_tab('https://github.com/mrprogrammer2938/Black-Tool/tree/master/Help')
 
 
     def black_tool_installing_mess(self):
         global label_mess
         label_mess = Label(self.root,text='\nBlack-Tool Installed!',foreground='green',background='black')
         label_mess.grid()
-        label_mess.place(bordermode=OUTSIDE,x=175,y=260)
+        label_mess.place(bordermode=OUTSIDE,x=175,y=240)
         label_mess.after(4000,self.black_tool_installing_mess_clear)
 
     def black_tool_installing_mess_clear(self):
         label_mess.destroy()
-        if ch:
+        if banner_color == 1:
             label_installing.destroy()
-        elif ch1:
+        elif banner_color == 2:
             label_installing_2.destroy()
-        elif ch2:
+        elif banner_color == 3:
             label_installing_3.destroy()
         else:
             pass
