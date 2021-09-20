@@ -19,7 +19,7 @@ Black-Tool 4.0.0
 <link rel='icon' href='Black-Tool-Logo.jpeg'>
 <center>
 <a href="https://mrprogrammer2938.github.io/Black-Tool" target="_blank">
-  <img src="Black-Tool-Logo.png" width="350" alt="Black-Tool logo">
+  <img src="Black_Tool_Logo.png" width="350" alt="Black-Tool logo">
   </a>
 </center><br>
 
