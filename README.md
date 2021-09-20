@@ -192,4 +192,4 @@ Black-Tool v4.0.0
 #### [Github.Io](https://mrprogrammer2938.github.io/Black-Tool)
 <br>
 <!-- 
-#### [Donate]() <!-- Donate Logo --> -->
+#### [Donate]() -->
