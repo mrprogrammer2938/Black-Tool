@@ -25,14 +25,17 @@ class black_tool(object):
     def __init__(self):
         super().__init__()
         self.root = Tk()
+
         self.root.title('Black-Tool/Installing')
-                
-
-        # photo = PhotoImage(file = '')
-        choose = Label(self.root,text='Please, Choose Banner Color:',foreground='green',background='black')
-        choose.grid()
-        choose.place(bordermode=OUTSIDE,x=150,y=30)
-
+        self.run()
+        self.photo = PhotoImage(file = 'Black_Tool_Logo.png')
+        self.root.iconphoto(False,self.photo)
+        self.root.iconbitmap(default=self.photo)
+        self.root.configure(background='black')
+        self.root.resizable(0,0)
+        self.root.geometry("700x500")
+        self.root.mainloop()
+    def run(self):
         menu = Menu(self.root)
 
         filemenu = Menu(menu,tearoff=0)
@@ -41,13 +44,76 @@ class black_tool(object):
         self.root.config(menu=menu)
         filemenu.add_command(label='Help',command=self.black_tool_help)
         filemenu.add_command(label='Dev',command=self.black_tool_developer)
+        self.text = Text(self.root,width=100,height=120)
+        self.text.grid()
+        self.text.insert(INSERT,'''
+        MIT License
+
+    Copyright (c) 2021 Black-Tool
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.''')
+        self.text.configure(background='white',foreground='black',state='disabled')
+
+        self.click = Button(self.root,text='Next',width=9,command=self.start)
+        self.click.grid()
+        self.click.place(bordermode=OUTSIDE,x=600,y=400)
+        self.click.configure(state='disabled')
+        self.exit = Button(self.root,text='Exit',width=9,command=self.ext)
+        self.exit.grid()
+        self.exit.place(bordermode=OUTSIDE,x=530,y=400)
         
         global ch
         global ch1
         global ch2
+
+        ch = IntVar()
+
+        ch1 = Radiobutton(self.root,text='I Accept License',command=self.check_r,variable=ch,value=1)
+        ch1.grid()
+        ch1.place(bordermode=OUTSIDE,x=200,y=400)
+
+        ch2 = Radiobutton(self.root,text='No',variable=ch,value=2,command=self.check_r)
+        ch2.grid()
+        ch2.place(bordermode=OUTSIDE,x=200,y=420)
+    def start(self):
+        self.click.destroy()
+        self.exit.destroy()
+        self.text.destroy()
+        ch1.destroy()
+        ch2.destroy()
+        choose = Label(self.root,text='Please, Choose Banner Color:',foreground='green',background='black')
+        choose.grid()
+        choose.place(bordermode=OUTSIDE,x=150,y=30)
+
+        
         global green
         global red
         global blue
+
+        self.back = Button(self.root,text='Back',width=9,command=self.run)
+        self.back.grid()
+        self.back.place(bordermode=OUTSIDE,x=530,y=400)
+
+
+        self.exit_2 = Button(self.root,text='Exit',width=9,command=self.ext)
+        self.exit_2.grid()
+        self.exit_2.place(bordermode=OUTSIDE,x=600,y=400)
 
         ch = IntVar()
 
@@ -71,12 +137,6 @@ class black_tool(object):
         exit = Button(self.root,text='Exit',command=self.ext)
         exit.grid()
         exit.place(bordermode=OUTSIDE,x=175,y=180)
-
-        self.root.configure(background='black')
-        # self.root.iconphoto(False,photo)
-        self.root.resizable(0,0)
-        self.root.geometry("500x500")
-        self.root.mainloop()
 
     def start_program(self):
         global banner_color
@@ -134,13 +194,21 @@ class black_tool(object):
             label_installing_3.destroy()
         else:
             pass
+    def check_r(self):
+        choose = ch.get()
+        if choose == 1:
+            self.click.configure(state='enable')
+        elif choose == 2:
+            self.click.configure(state='disabled')
 
     @staticmethod
     def title():
         if platform.system() == 'Linux':
             os.system("printf '\033]2;Black-Tool/Installing\a'")
         else:
-            os.system("title Black-Tool/Installing")
+            print("Please, Run This Program on Linux or MacOS!")
+            ctypes.windll.user32.MesaageBoxW(0,'Please, Run This Program on Linux or MacOS!')
+            exit()
 
 if __name__ == '__main__':
     try:
@@ -151,5 +219,6 @@ if __name__ == '__main__':
             window = black_tool()    
             print(f"\nClose Programm At: {time_zone}")
     except requests.ConnectionError:
-        print("Please, check Internet!")        
+        print("\nPlease, check Internet!")        
         ctypes.windll.user32.MessageBoxW(0,'Please, Check Internet','Black-Tool Error',0x10 | 0x0)
+        exit()
