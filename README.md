@@ -177,19 +177,13 @@ cd Update
 <br>
 
 ### Black-Tool [Developer](https://github.com/mrprogrammer2938/Black-Tool/tree/master/Developer)
-<br>
 
 #### Black-Tool [Help](https://github.com/mrprogrammer2938/Black-Tool/tree/master/Help)
 <br>
 
 #### What is Black-Tool?
+
 #### [Read](https://github.com/mrprogrammer2938/Black-Tool-Read)...
-<!---
-Black-Tool v4.0.0
---->
-<br>
 
 #### [Github.Io](https://mrprogrammer2938.github.io/Black-Tool)
 <br>
-<!-- 
-#### [Donate]() -->
