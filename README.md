@@ -139,9 +139,9 @@ git clone https://github.com/mrprogrammer2938/Black-Tool
 
 cd Black-Tool
 
-bash install.sh
+python3 install.py
 
-hack --start
+python3 hack --start
 </pre>
 <br>
 
@@ -166,7 +166,7 @@ cd Update
 
 ##### Uninstalling
 ``` sh
-./uninstall.sh
+python3 uninstall.py
 ```
 
 ### [Mr.nope](https://github.com/mrprogrammer2938) Account...
