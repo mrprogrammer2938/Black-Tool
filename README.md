@@ -6,7 +6,6 @@ Instagram: https://instagram.com/mrprogrammer2938
 Pinterest: https://www.pinterest.com/mrprogrammer2938
 -->
 <meta charset='utf-8'>
-<link rel='icon' href=''>
 <center>
 
 # [Black-Tool](https://github.com/mrprogrammer2938)
@@ -31,7 +30,7 @@ Black-Tool 4.0.0
 
 #### Install the tools and start hacking Attacking !
 
-[Black-Tool](https://github.com/mrprogrammer2938/Black-Tool) ابزار 
+[Black-Tool](https://github.com/mrprogrammer2938/Black-Tool) 
 <br>
 <center>
 
