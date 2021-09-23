@@ -9,6 +9,11 @@ cd Black-Tool
 
 python3 install.py
 ```
+
+##### Uninstalling
+``` sh
+python3 uninstall.py
+```
 <br>
 
 #### Choose Banner Color:
