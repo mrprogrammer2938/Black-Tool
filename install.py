@@ -233,10 +233,9 @@ class black_tool(object):
         if platform.system() == 'Linux':
             os.system("printf '\033]2;Black-Tool/Installing\a'")
         else:
-            # print("Please, Run This Program on Linux or MacOS!")
-            # ctypes.windll.user32.MessageBoxW(0,'Please, Run This Program on Linux or MacOS!','Black-Tool Error',0x10 | 0x0)
-            # exit()
-            pass
+            print("Please, Run This Program on Linux or MacOS!")
+            ctypes.windll.user32.MessageBoxW(0,'Please, Run This Program on Linux or MacOS!','Black-Tool Error',0x10 | 0x0)
+            exit()
 
 
 if __name__ == '__main__':
