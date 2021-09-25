@@ -28,7 +28,6 @@ If a tool had a bug
 Email me (～￣▽￣)～
 #### Gmail Address
 <pre>
-gg1504722@gmail.com
 mrprogrammer2938@gmail.com
 </pre>
 
