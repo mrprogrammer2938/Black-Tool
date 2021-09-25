@@ -4,9 +4,9 @@ Installing:
             
             cd Black-Tool
             
-            ./install.sh
+            python3 inatall.py
             
-            hack --help
+            python3 hack --help
 ------------------------------------------------------------------------------------------
 Argument:
     Black-Tool Usage:
@@ -27,4 +27,8 @@ Updating:
 --------------------------------------------------------------------------------------------
 Uninstalling:
               
-              ./uninstall
+              python3 uninstall.py
+              
+              or
+ 
+              bash uninstall.sh
