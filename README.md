@@ -15,10 +15,10 @@ Pinterest: https://www.pinterest.com/mrprogrammer2938
 <!--
 Black-Tool 4.0.0
 -->
-<link rel='icon' href='Black-Tool-Logo.jpeg'>
+<link rel='icon' href='https://github.com/mrprogrammer2938/Black-Tool/blob/master/Scr/Black_Tool_Logo.png'>
 <center>
 <a href="https://mrprogrammer2938.github.io/Black-Tool" target="_blank">
-  <img src="Black_Tool_Logo.png" width="350" alt="Black-Tool logo">
+  <img src="https://github.com/mrprogrammer2938/Black-Tool/blob/master/Scr/Black_Tool_Logo.png" width="350" alt="Black-Tool logo">
   </a>
 </center><br>
 
