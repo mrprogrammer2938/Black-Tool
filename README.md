@@ -54,7 +54,7 @@ Black-Tool 4.0.0
 Link | Version | Suport 
 :----:|:-------:|:------:
 [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool) | 4.0.0 | (linux,Windows,MacOS)
-[Black-Tool](https://github.com/Black-Tool/Black-Tool) | 2.6.5 | (linux,Windows,MacOS)
+[Black-Tool](https://github.com/Black-Tool/Black-Tool) | 2.6.5 | (linux,MacOS)
 <br>
 </center>
 
