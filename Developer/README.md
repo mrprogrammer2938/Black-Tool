@@ -19,7 +19,7 @@ Image
     Hello, I am Sina Meysami (Black-Tool Dev)
     I started programming when I was 10 years old
     And now I am 15 years old.<br>
-    I am fluent in python, c++, ruby, bash script, batch file ,html, css
+    I am fluent in python, c++, bash script, html
     </h3>
 </article>
 <br>
