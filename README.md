@@ -12,7 +12,7 @@ Pinterest: https://www.pinterest.com/mrprogrammer2938
 
 <br>
 <!--
-Black-Tool 4.0.0
+Black-Tool v4.0.0
 -->
 <link rel='icon' href='https://github.com/mrprogrammer2938/Black-Tool/blob/master/Scr/Black_Tool_Logo.png'>
 <center>
@@ -25,7 +25,7 @@ Black-Tool 4.0.0
 `Black-Tool 4.0.0 (New)`
 <hr>
 
-[![Python 3.9](https://img.shields.io/badge/Python-3.9-yellow.svg)](https://www.python.org/downloads/)   [![Python 3.5](https://img.shields.io/static/v1?label=python&message=3.5&color=red)](https://www.python.org/downloads/)<br>
+[![Python 3.9](https://img.shields.io/badge/Python-3.9-yellow.svg)](https://www.python.org/downloads/)   [![Python 3.5](https://img.shields.io/static/v1?label=python&message=3.5&color=red)](https://www.python.org/downloads/)
 
 #### Install the tools and start hacking Attacking !
 
