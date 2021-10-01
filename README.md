@@ -5,7 +5,6 @@ Github: https://github.com/mrprogrammer2938
 Instagram: https://instagram.com/mrprogrammer2938
 Pinterest: https://www.pinterest.com/mrprogrammer2938
 -->
-<meta charset='utf-8'>
 <center>
 
 # [Black-Tool](https://github.com/mrprogrammer2938)
