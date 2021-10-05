@@ -47,7 +47,7 @@ Black-Tool v4.0.0
 </center>
 <center>
 
-### This Program write by [Sina Meysami](https://github.com/mrprogrammer2938)
+### This Program write by [Black-Software[(https://github.com/black-software-Com)
 <br>
 
 Link | Version | Suport 
