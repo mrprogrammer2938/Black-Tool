@@ -185,3 +185,11 @@ python3 uninstall.py
 
 #### [Github.Io](https://mrprogrammer2938.github.io/Black-Tool)
 <br>
+
+##### If you want to become a Black-Team member
+###### Email us
+
+``` txt
+gg1504722@gmail.com
+```
+<br>
