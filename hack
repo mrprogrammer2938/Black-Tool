@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# This code write by Mr.nope
+# This Program Write By Sina Meysami 
 # Mr.Nope = Mr.Programmer2938
 # Version 4.0.0 New... ;)
 # Github: https://github.com/mrprogrammer2938
@@ -154,6 +154,11 @@ def title_installing_lib():
         print("\nPlease, Run This Programm on Linux, MacOS!\n")
         print("\nYour OS: " + system + "\n")
         sys.exit()
+def title_d():
+    if system == 'Linux':
+        os.system("printf '\033]2;Black-Tool/Donate\a")
+    else:
+        os.system("title Black-Tool/Donate")
 def cls():
     if system == 'Linux':
         os.system("clear")
@@ -619,8 +624,9 @@ def black():
     print("{27}.Translate")
     print("{28}.Connection Test")
     print("{29}.Black-Tool Logo")
-    print("{30}.Help")
-    print("{31}.Update & Uninstall")
+    print("{30}.Donate")
+    print("{31}.Help")
+    print("{32}.Update & Uninstall")
     print("{0}.Developer")
     print("[C].Command")
     print("{99}.Exit")
@@ -684,8 +690,10 @@ def black():
     elif choose == '29':
         black_tool_logo_show()
     elif choose == '30':
-        start_help()
+        black_donate()
     elif choose == '31':
+        start_help()
+    elif choose == '32':
         black_Update_Uninstalling()
     elif choose == '0':
         black_tool_developer()
@@ -750,8 +758,9 @@ def black_2():
     print("{27}.Translate")
     print("{28}.Connection Test")
     print("{29}.Black-Tool Logo")
-    print("{30}.Help")
-    print("{31}.Update & Uninstall")
+    print("{30}.Donate")
+    print("{31}.Help")
+    print("{32}.Update & Uninstall")
     print("{0}.Developer")
     print("[C].Command")
     print("{99}.Exit")
@@ -815,8 +824,10 @@ def black_2():
     elif choose == '29':
         black_tool_logo_show_2()
     elif choose == '30':
-        start_help_2()
+        black_donate_2()
     elif choose == '31':
+        start_help_2()
+    elif choose == '32':
         black_Update_Uninstalling_2()
     elif choose == '0':
         black_tool_developer_2()
@@ -849,6 +860,28 @@ def black_2():
         cls()
         print(choose + color.red + " Not Found!" + color.End)
         try104()
+def black_donate():
+    title_d()
+    cls()
+    webbrowser.open_new_tab('https://idpay.ir/mrprogrammer2938')
+    try177()
+def black_donate_2():
+    title_d()
+    cls()
+    webbrowser.open_new_tab('https://idpay.ir/mrprogrammer2938')
+    try178()
+def try177():
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        menu()
+    else:
+        menu()
+def try178():
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        black_2()
+    else:
+        black_2()
 def try34():
     try:
         try:
