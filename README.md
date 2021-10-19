@@ -191,5 +191,6 @@ python3 uninstall.py
 
 ``` txt
 gg1504722@gmail.com
+blacksoftwarecompany3@gmail.com
 ```
 <br>
