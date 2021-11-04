@@ -1,8 +1,11 @@
-#!/bin/sh
-# This code write by Mr.Nope
-# Mr.Nope = Mr.Programmer2938
+#!/bin/env bash
+# Black-Tool v5.0.0 (New)
 # Black-Tool Installing File
-# Version 4.0.0
+#
+# Website: https://blacksoftware.ir
+# Github: https://github.com/black-software-com
+# Instagram: https://instagram.com/black_software_company
+#
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
