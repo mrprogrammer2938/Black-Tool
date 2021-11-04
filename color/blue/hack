@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-# This code write by Mr.nope
+# This Program Write By Sina Meysami 
 # Mr.Nope = Mr.Programmer2938
-# Version 4.0.0 New... ;)
+# Version 5.0.0 New... ;)
 # Github: https://github.com/mrprogrammer2938
 # Instagram: https://instagram.com/programmer2938
 # ----------------------------------------------------------------
@@ -27,12 +27,12 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-# Line 2100
+# Line 4270
 blue='\033[96m'
 End='\033[0m'
 green = '\033[92m'
 red = '\033[91m'
-banner_arg = blue + """                                                                     
+banner_arg = green + """                                                                     
          ███████████  ████                     █████         ███████████                   ████   ® 
         ░░███░░░░░███░░███                    ░░███         ░█░░░███░░░█                  ░░███  
          ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███
@@ -92,11 +92,14 @@ import re
 import sys
 import subprocess
 import platform
+import hashlib
 import requests
 import webbrowser
 import getpass
 import threading
 import socket
+
+from requests.models import parse_header_links
 system = platform.uname()[0]
 Black_Tool_Run_Err = "\nPlease, Run This Programm on Linux Or MacOS!\n"
 s = 0
@@ -154,6 +157,11 @@ def title_installing_lib():
         print("\nPlease, Run This Programm on Linux, MacOS!\n")
         print("\nYour OS: " + system + "\n")
         sys.exit()
+def title_d():
+    if system == 'Linux':
+        os.system("printf '\033]2;Black-Tool/Donate\a")
+    else:
+        os.system("title Black-Tool/Donate")
 def cls():
     if system == 'Linux':
         os.system("clear")
@@ -177,7 +185,7 @@ try:
         except ImportError:
             try:
                try:
-                  command("pip3 intsll colorama");
+                  command("python -m pip3 intsll colorama");
                except KeyboardInterrupt:
                    print("\nCtrl + C")
                    print("\nStop !!!")
@@ -187,11 +195,39 @@ try:
                 print("\nStop !!!")
                 sys.exit()
         try:
+            from ttkbootstrap import Style
+        except (ImportError,ModuleNotFoundError):
+            try:
+                try:
+                    os.system("python -m pip install ttkbootstrap")
+                except KeyboardInterrupt:
+                    print("\nCtrl+C")
+                    print("\nExiting...")
+                    sys.exit()
+            except EOFError:
+                print("\nCtrl+D")
+                print("\nExiting...")
+                sys.exit()
+        try:
+            import tkinterweb
+        except (ImportError,ModuleNotFoundError):
+            try:
+                try:
+                    os.system("python -m pip install tkinterweb")
+                except KeyboardInterrupt:
+                    print("\nCtrl+C")
+                    print("\nExiting...")
+                    sys.exit()
+            except EOFError:
+                print("\nCtrl+D")
+                print("\nExiting...")
+                sys.exit()
+        try:
             from speedtest import Speedtest
         except ImportError:
             try:
                 try:
-                    os.system("pip3 install speedtest-cli")
+                    os.system("python -m pip3 install speedtest-cli")
                 except EOFError:
                     print("\nCtrl + D")
                     print("\nStop !!!")
@@ -201,11 +237,11 @@ try:
                 print("\nStop !!!")
                 sys.exit()
         try:
-            import pyttsx3 as pt
+            import pyttsx3 as px
         except ImportError:
             try:
                 try:
-                    os.system("pip install pyttsx3")
+                    os.system("python -m pip install pyttsx3")
                 except EOFError:
                     print("\nCtrl + D")
                     print("\nStop !!!")
@@ -218,7 +254,7 @@ try:
             from colorama import Fore,init
         except ImportError:
             try:
-                os.system("pip3 install colorama")
+                os.system("python -m pip3 install colorama")
             except (KeyboardInterrupt,EOFError):
                 print("\nStop !!!")
                 sys.exit()
@@ -227,7 +263,7 @@ try:
         except ImportError:
             try:
                try:
-                    os.system("pip install deep_translator")
+                    os.system("python -m pip install deep_translator")
                     from deep_translator import GoogleTranslator
                except KeyboardInterrupt:
                    print("\nCtrl + C")
@@ -243,7 +279,7 @@ try:
         except ImportError:
             try:
                 try:
-                    os.system("pip3 install playsound")
+                    os.system("python -m pip3 install playsound")
                 except EOFError:
                     print("\nCtrl + D")
                     print("\nStop !!!")
@@ -259,7 +295,7 @@ try:
                 try:
                     try:
                         os.system("apt install libbluetooth-dev")
-                        os.system("pip install pybluez")
+                        os.system("python -m pip install pybluez")
                         import bluetooth
                     except EOFError:
                         print("\nCtrl + D")
@@ -271,7 +307,7 @@ try:
                     sys.exit()
             elif system == 'Windows':
                 os.system("scoop install libbluetooth-dev")
-                os.system("pip install pybluez")
+                os.system("python -m pip install pybluez")
             else:
                 print("\nCannot Installing pybluez\n")
                 print("\nPlease, This Programm on Linux, Windows or MacOS!\n")
@@ -281,8 +317,8 @@ try:
         except ImportError:
             try:
                 try:
-                    os.system("pip install googlesearch-python")
-                    os.system("pip3 install googlesearch-python")
+                    os.system("python -m pip install googlesearch-python")
+                    os.system("python -m pip3 install googlesearch-python")
                 except KeyboardInterrupt:
                     print("\nCtrl + C")
                     print("\nStop !!!")
@@ -296,7 +332,7 @@ try:
         except ImportError:
             try:
                 try:
-                    command("pip3 install ipapi");
+                    command("python -m pip3 install ipapi");
                 except KeyboardInterrupt:
                     print("\nCtrl + C")
                     print("\nStop !!!")
@@ -307,10 +343,11 @@ try:
                 sys.exit()
         try:
             from tkinter import *
-            from tkinter import messagebox
+            from tkinter.ttk import Button as TButton,Label as TLabel
+            from tkinter.messagebox import showerror,showwarning,showinfo
         except ImportError:
             try:
-                os.system("pip install tk-tools")
+                os.system("python -m pip install tk-tools")
             except (KeyboardInterrupt,EOFError):
                 print("Stop !!!!")
                 sys.exit()
@@ -319,7 +356,7 @@ try:
         except ImportError:
             try:
                 try:
-                    os.system("pip install PIL")
+                    os.system("python -m pip install PIL")
                     from PIL import *
                 except EOFError:
                     print("\nCtrl + D")
@@ -333,15 +370,15 @@ except requests.ConnectionError:
     title_Err()
     print(f"Please, Check {color.green}Internet{color.End} !\n")
     time.sleep(0.25)
-    messagebox.showerror('Black-Tool/Error','Please, Check Internet')
+    showerror('Black-Tool/Error','Please, Check Internet')
     sys.exit()
 # ----------------------------------------------------------------------------------------------------------------
 
 Black_Tool_info = {
     "Developer":"Sina Meysami",
-    "CodeName":"Black-Tool",
-    "Version":"4.0.0",
-    "Home":"https://github.com/mrprogrammer2938"
+    "Tool Name":"Black-Tool",
+    "Version":"v5.0.0",
+    "Home":"https://github.com/black-software-com"
 }
 Black_Tool_du = dumps(Black_Tool_info)
 Black_Tool_lo = loads(Black_Tool_du)
@@ -394,7 +431,9 @@ def user_search():
     else:
         print("\nPlease, Run This Tool as Root!\n")
         sys.exit()
-opt = color.blue + color.line + "\nBlack-Tool" + color.End + color.blue + "~# " + color.End
+my_host = socket.gethostname()
+my_ip = socket.gethostbyname(my_host)
+opt = f"{color.org} {my_ip} {color.green} @ {color.blue} {color.line} \nBlack-Tool{color.End}{color.blue} ~# {color.End}"
 Black_Tool_Shell_Help = """
 set | set [Option]
 options | show options
@@ -424,7 +463,7 @@ k_Tool_Banner = Fore.BLUE + """
                                           .;,.                        
                                            ...                        
                                             . \n """ + color.End
-Black_Hack_version = "Black-Tool 4.0.0"
+Black_Hack_version = "Black-Tool 5.0.0"
 def title():
     if system == 'Linux':
         os.system("printf '\033]2;Black-Tool\a'")
@@ -467,7 +506,7 @@ def start_1(host="https://google.com"):
     except requests.ConnectionError:
         print(f"Please, Check {color.green}Internet{color.End} !\n")
         time.sleep(0.25)
-        messagebox.showerror('Black-Tool/Error','Please, Check Internet')
+        showerror('Black-Tool/Error','Please, Check Internet')
         sys.exit()
 def user_run():
     user_l = getpass.getuser()
@@ -618,9 +657,13 @@ def black():
     print("{26}.Mr.nope Tools")
     print("{27}.Translate")
     print("{28}.Connection Test")
-    print("{29}.Black-Tool Logo")
-    print("{30}.Help")
-    print("{31}.Update & Uninstall")
+    print("{29}.Hash")
+    print("{30}.Black-Tool Logo")
+    print("{31}.Donate")
+    print("{32}.Send Feedback")
+    print("{33}.About Black-Software")
+    print("{34}.Help")
+    print("{35}.Update & Uninstall")
     print("{0}.Developer")
     print("[C].Command")
     print("{99}.Exit")
@@ -682,10 +725,18 @@ def black():
     elif choose == '28':
         check_internet_b_2()
     elif choose == '29':
-        black_tool_logo_show()
+        hash_1()
     elif choose == '30':
-        start_help()
+        black_tool_logo_show()
     elif choose == '31':
+        black_donate()
+    elif choose == '32':
+        send_blackfeedback()
+    elif choose == '33':
+        black_software()
+    elif choose == '34':
+        start_help()
+    elif choose == '35':
         black_Update_Uninstalling()
     elif choose == '0':
         black_tool_developer()
@@ -749,9 +800,13 @@ def black_2():
     print("{26}.Mrnope Tools")
     print("{27}.Translate")
     print("{28}.Connection Test")
-    print("{29}.Black-Tool Logo")
-    print("{30}.Help")
-    print("{31}.Update & Uninstall")
+    print("{29}.Hash")
+    print("{30}.Black-Tool Logo")
+    print("{31}.Donate")
+    print("{32}.Send Feedback")
+    print("{33}.About Black-Software")
+    print("{34}.Help")
+    print("{35}.Update & Uninstall")
     print("{0}.Developer")
     print("[C].Command")
     print("{99}.Exit")
@@ -813,10 +868,18 @@ def black_2():
     elif choose == '28':
         check_internet_b_2()
     elif choose == '29':
-        black_tool_logo_show_2()
+        hash_2()
     elif choose == '30':
-        start_help_2()
+        black_tool_logo_show_2()
     elif choose == '31':
+        black_donate_2()
+    elif choose == '32':
+        send_blackfeedback_2()
+    elif choose == '33':
+        black_software_2()
+    elif choose == '34':
+        start_help_2()
+    elif choose == '35':
         black_Update_Uninstalling_2()
     elif choose == '0':
         black_tool_developer_2()
@@ -849,6 +912,639 @@ def black_2():
         cls()
         print(choose + color.red + " Not Found!" + color.End)
         try104()
+def black_donate():
+    title_d()
+    cls()
+    webbrowser.open_new_tab('https://idpay.ir/mrprogrammer2938')
+    try177()
+def black_donate_2():
+    title_d()
+    cls()
+    webbrowser.open_new_tab('https://idpay.ir/mrprogrammer2938')
+    try178()
+def try177():
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        menu()
+    else:
+        menu()
+def hash_1():
+    cls()
+    print("{1}.md5")
+    print("{2}.new")
+    print("{3}.sha1")
+    print("{4}.sha224")
+    print("{5}.sha256")
+    print("{0}.Add Hash Code")
+    print("{99}.Main Menu")
+    choose = input(opt)
+    if choose == '1':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.md5(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_1()
+        else:
+            hash_1()
+    elif choose == '2':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.new(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_1()
+        else:
+            hash_1()
+    elif choose == '3':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.sha1(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_1()
+        else:
+            hash_1()
+    elif choose == '4':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.sha224(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_1()
+        else:
+            hash_1()
+    elif choose == '5':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.sha256(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_1()
+        else:
+            hash_1()
+    elif choose == '0':
+        cls()
+        word = input("Enter Word: ")
+        code = input("Enter EnCode: ")
+        hashlib.code(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_1()
+        else:
+            hash_1()
+    elif choose == '99' or choose.lower() == 'exit' or choose.lower() == 'quit':
+        menu()
+    else:
+        hash_1()
+def hash_2():
+    cls()
+    print("{1}.md5")
+    print("{2}.new")
+    print("{3}.sha1")
+    print("{4}.sha224")
+    print("{5}.sha256")
+    print("{0}.Add Hash Code")
+    print("{99}.Main Menu")
+    choose = input(opt)
+    if choose == '1':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.md5(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_2()
+        else:
+            hash_2()
+    elif choose == '2':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.new(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_2()
+        else:
+            hash_2()
+    elif choose == '3':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.sha1(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_2()
+        else:
+            hash_2()
+    elif choose == '4':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.sha224(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_2()
+        else:
+            hash_2()
+    elif choose == '5':
+        cls()
+        word = input("Enter Word: ").encode()
+        hashlib.sha256(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_2()
+        else:
+            hash_2()
+    elif choose == '0':
+        cls()
+        word = input("Enter Word: ")
+        code = input("Enter EnCode: ")
+        hashlib.code(word).hexdigest()
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            hash_2()
+        else:
+            hash_2()
+    elif choose == '99' or choose.lower() == 'exit' or choose.lower() == 'quit':
+        black_2()
+    else:
+        hash_2()
+def login_finder():
+    cls()
+    print("{1}.Black-Tool Wp List")
+    print("{2}.enter wp admin list file")
+    print("{99}.Exit")
+    choose = input("Enter: ")
+    print("\n")
+    if choose == '1':
+        login_finder_opt_1()
+    elif choose == '2':
+        login_finder_opt_2()
+    elif choose == '99' or choose.lower() == 'exit' or choose.lower() == 'quit':
+        menu()
+    elif choose == '' or choose == ' ':
+        login_finder()
+    else:
+        cls()
+        print(f'{Fore.YELLOW}{choose} {Fore.RED}Not Found!{color.end}')
+def login_finder_opt_1():
+    cls()
+    print("Please, Enter URL!\n")
+    url = input("https://")
+    time.sleep(1)
+    paths = ['admin/','administrator/','login.php','administration/','admin1/','admin2/','admin3/','admin4/','admin5/','moderator/','webadmin/','adminarea/','bb-admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
+'memberadmin/','administratorlogin/','adm/','account.asp','admin/account.asp','admin/index.asp','admin/login.asp','admin/admin.asp','/login.aspx',
+'admin_area/admin.asp','admin_area/login.asp','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/admin.html','admin_area/login.html','admin_area/index.html','admin_area/index.asp','bb-admin/index.asp','bb-admin/login.asp','bb-admin/admin.asp',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','admin/controlpanel.html','admin.html','admin/cp.html','cp.html',
+'administrator/index.html','administrator/login.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html','moderator.html',
+'moderator/login.html','moderator/admin.html','account.html','controlpanel.html','admincontrol.html','admin_login.html','panel-administracion/login.html',
+'admin/home.asp','admin/controlpanel.asp','admin.asp','pages/admin/admin-login.asp','admin/admin-login.asp','admin-login.asp','admin/cp.asp','cp.asp',
+'administrator/account.asp','administrator.asp','acceso.asp','login.asp','modelsearch/login.asp','moderator.asp','moderator/login.asp','administrator/login.asp',
+'moderator/admin.asp','controlpanel.asp','admin/account.html','adminpanel.html','webadmin.html','administration','pages/admin/admin-login.html','admin/admin-login.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','user.asp','user.html','admincp/index.asp','admincp/login.asp','admincp/index.html',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','adminarea/index.html','adminarea/admin.html','adminarea/login.html',
+'panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html','admin/admin_login.html',
+'admincontrol/login.html','adm/index.html','adm.html','admincontrol.asp','admin/account.asp','adminpanel.asp','webadmin.asp','webadmin/index.asp',
+'webadmin/admin.asp','webadmin/login.asp','admin/admin_login.asp','admin_login.asp','panel-administracion/login.asp','adminLogin.asp',
+'admin/adminLogin.asp','home.asp','admin.asp','adminarea/index.asp','adminarea/admin.asp','adminarea/login.asp','admin-login.html',
+'panel-administracion/index.asp','panel-administracion/admin.asp','modelsearch/index.asp','modelsearch/admin.asp','administrator/index.asp',
+'admincontrol/login.asp','adm/admloginuser.asp','admloginuser.asp','admin2.asp','admin2/login.asp','admin2/index.asp','adm/index.asp',
+'adm.asp','affiliate.asp','adm_auth.asp','memberadmin.asp','administratorlogin.asp','siteadmin/login.asp','siteadmin/index.asp','siteadmin/login.html','memberadmin/','administratorlogin/','adm/','admin/account.php','admin/index.php','admin/login.php','admin/admin.php','admin/account.php',
+'admin_area/admin.php','admin_area/login.php','siteadmin/login.php','siteadmin/index.php','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.php','bb-admin/index.php','bb-admin/login.php','bb-admin/admin.php','admin/home.php','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.php','admin.php','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.php','cp.php','administrator/index.php','administrator/login.php','nsw/admin/login.php','webadmin/login.php','admin/admin_login.php','admin_login.php',
+'administrator/account.php','administrator.php','admin_area/admin.html','pages/admin/admin-login.php','admin/admin-login.php','admin-login.php',
+'bb-admin/index.html','bb-admin/login.html','acceso.php','bb-admin/admin.html','admin/home.html','login.php','modelsearch/login.php','moderator.php','moderator/login.php',
+'moderator/admin.php','account.php','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.php','admincontrol.php',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.php','adminarea/index.html','adminarea/admin.html',
+'webadmin.php','webadmin/index.php','webadmin/admin.php','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.php','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.php','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.php','wp-login.php','adminLogin.php','admin/adminLogin.php','home.php','admin.php','adminarea/index.php',
+'adminarea/admin.php','adminarea/login.php','panel-administracion/index.php','panel-administracion/admin.php','modelsearch/index.php',
+'modelsearch/admin.php','admincontrol/login.php','adm/admloginuser.php','admloginuser.php','admin2.php','admin2/login.php','admin2/index.php','usuarios/login.php',
+'adm/index.php','adm.php','affiliate.php','adm_auth.php','memberadmin.php','administratorlogin.php','adm/','admin/account.cfm','admin/index.cfm','admin/login.cfm','admin/admin.cfm','admin/account.cfm',
+'admin_area/admin.cfm','admin_area/login.cfm','siteadmin/login.cfm','siteadmin/index.cfm','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.cfm','bb-admin/index.cfm','bb-admin/login.cfm','bb-admin/admin.cfm','admin/home.cfm','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.cfm','admin.cfm','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.cfm','cp.cfm','administrator/index.cfm','administrator/login.cfm','nsw/admin/login.cfm','webadmin/login.cfm','admin/admin_login.cfm','admin_login.cfm',
+'administrator/account.cfm','administrator.cfm','admin_area/admin.html','pages/admin/admin-login.cfm','admin/admin-login.cfm','admin-login.cfm',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.cfm','modelsearch/login.cfm','moderator.cfm','moderator/login.cfm',
+'moderator/admin.cfm','account.cfm','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.cfm','admincontrol.cfm',
+'admin/adminLogin.html','acceso.cfm','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.cfm','adminarea/index.html','adminarea/admin.html',
+'webadmin.cfm','webadmin/index.cfm','webadmin/admin.cfm','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.cfm','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.cfm','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.cfm','wp-login.cfm','adminLogin.cfm','admin/adminLogin.cfm','home.cfm','admin.cfm','adminarea/index.cfm',
+'adminarea/admin.cfm','adminarea/login.cfm','panel-administracion/index.cfm','panel-administracion/admin.cfm','modelsearch/index.cfm',
+'modelsearch/admin.cfm','admincontrol/login.cfm','adm/admloginuser.cfm','admloginuser.cfm','admin2.cfm','admin2/login.cfm','admin2/index.cfm','usuarios/login.cfm',
+'adm/index.cfm','adm.cfm','affiliate.cfm','adm_auth.cfm','memberadmin.cfm','administratorlogin.cfm','adminLogin/','admin_area/','panel-administracion/','instadmin/','login.aspx',
+'memberadmin/','administratorlogin/','adm/','admin/account.aspx','admin/index.aspx','admin/login.aspx','admin/admin.aspx','admin/account.aspx',
+'admin_area/admin.aspx','admin_area/login.aspx','siteadmin/login.aspx','siteadmin/index.aspx','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.aspx','bb-admin/index.aspx','bb-admin/login.aspx','bb-admin/admin.aspx','admin/home.aspx','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.aspx','admin.aspx','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.aspx','cp.aspx','administrator/index.aspx','administrator/login.aspx','nsw/admin/login.aspx','webadmin/login.aspx','admin/admin_login.aspx','admin_login.aspx',
+'administrator/account.aspx','administrator.aspx','admin_area/admin.html','pages/admin/admin-login.aspx','admin/admin-login.aspx','admin-login.aspx',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.aspx','modelsearch/login.aspx','moderator.aspx','moderator/login.aspx',
+'moderator/admin.aspx','acceso.aspx','account.aspx','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.aspx','admincontrol.aspx',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.aspx','adminarea/index.html','adminarea/admin.html',
+'webadmin.aspx','webadmin/index.aspx','webadmin/admin.aspx','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.aspx','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.aspx','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.aspx','wp-login.aspx','adminLogin.aspx','admin/adminLogin.aspx','home.aspx','admin.aspx','adminarea/index.aspx',
+'adminarea/admin.aspx','adminarea/login.aspx','panel-administracion/index.aspx','panel-administracion/admin.aspx','modelsearch/index.aspx',
+'modelsearch/admin.aspx','admincontrol/login.aspx','adm/admloginuser.aspx','admloginuser.aspx','admin2.aspx','admin2/login.aspx','admin2/index.aspx','usuarios/login.aspx',
+'adm/index.aspx','adm.aspx','affiliate.aspx','adm_auth.aspx','memberadmin.aspx','administratorlogin.aspx','memberadmin/','administratorlogin/','adm/','admin/account.js','admin/index.js','admin/login.js','admin/admin.js','admin/account.js',
+'admin_area/admin.js','admin_area/login.js','siteadmin/login.js','siteadmin/index.js','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.js','bb-admin/index.js','bb-admin/login.js','bb-admin/admin.js','admin/home.js','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.js','admin.js','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.js','cp.js','administrator/index.js','administrator/login.js','nsw/admin/login.js','webadmin/login.js','admin/admin_login.js','admin_login.js',
+'administrator/account.js','administrator.js','admin_area/admin.html','pages/admin/admin-login.js','admin/admin-login.js','admin-login.js',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.js','modelsearch/login.js','moderator.js','moderator/login.js',
+'moderator/admin.js','account.js','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.js','admincontrol.js',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.js','adminarea/index.html','adminarea/admin.html',
+'webadmin.js','webadmin/index.js','acceso.js','webadmin/admin.js','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.js','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.js','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.js','wp-login.js','adminLogin.js','admin/adminLogin.js','home.js','admin.js','adminarea/index.js',
+'adminarea/admin.js','adminarea/login.js','panel-administracion/index.js','panel-administracion/admin.js','modelsearch/index.js',
+'modelsearch/admin.js','admincontrol/login.js','adm/admloginuser.js','admloginuser.js','admin2.js','admin2/login.js','admin2/index.js','usuarios/login.js',
+'adm/index.js','adm.js','affiliate.js','adm_auth.js','memberadmin.js','administratorlogin.js','bb-admin/index.cgi','bb-admin/login.cgi','bb-admin/admin.cgi','admin/home.cgi','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.cgi','admin.cgi','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.cgi','cp.cgi','administrator/index.cgi','administrator/login.cgi','nsw/admin/login.cgi','webadmin/login.cgi','admin/admin_login.cgi','admin_login.cgi',
+'administrator/account.cgi','administrator.cgi','admin_area/admin.html','pages/admin/admin-login.cgi','admin/admin-login.cgi','admin-login.cgi',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.cgi','modelsearch/login.cgi','moderator.cgi','moderator/login.cgi',
+'moderator/admin.cgi','account.cgi','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.cgi','admincontrol.cgi',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.cgi','adminarea/index.html','adminarea/admin.html',
+'webadmin.cgi','webadmin/index.cgi','acceso.cgi','webadmin/admin.cgi','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.cgi','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.cgi','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.cgi','wp-login.cgi','adminLogin.cgi','admin/adminLogin.cgi','home.cgi','admin.cgi','adminarea/index.cgi',
+'adminarea/admin.cgi','adminarea/login.cgi','panel-administracion/index.cgi','panel-administracion/admin.cgi','modelsearch/index.cgi',
+'modelsearch/admin.cgi','admincontrol/login.cgi','adm/admloginuser.cgi','admloginuser.cgi','admin2.cgi','admin2/login.cgi','admin2/index.cgi','usuarios/login.cgi',
+'adm/index.cgi','adm.cgi','affiliate.cgi','adm_auth.cgi','memberadmin.cgi','administratorlogin.cgi','admin_area/admin.brf','admin_area/login.brf','siteadmin/login.brf','siteadmin/index.brf','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.brf','bb-admin/index.brf','bb-admin/login.brf','bb-admin/admin.brf','admin/home.brf','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.brf','admin.brf','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.brf','cp.brf','administrator/index.brf','administrator/login.brf','nsw/admin/login.brf','webadmin/login.brfbrf','admin/admin_login.brf','admin_login.brf',
+'administrator/account.brf','administrator.brf','acceso.brf','admin_area/admin.html','pages/admin/admin-login.brf','admin/admin-login.brf','admin-login.brf',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.brf','modelsearch/login.brf','moderator.brf','moderator/login.brf',
+'moderator/admin.brf','account.brf','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.brf','admincontrol.brf',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.brf','adminarea/index.html','adminarea/admin.html',
+'webadmin.brf','webadmin/index.brf','webadmin/admin.brf','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.brf','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.brf','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.brf','wp-login.brf','adminLogin.brf','admin/adminLogin.brf','home.brf','admin.brf','adminarea/index.brf',
+'adminarea/admin.brf','adminarea/login.brf','panel-administracion/index.brf','panel-administracion/admin.brf','modelsearch/index.brf',
+'modelsearch/admin.brf','admincontrol/login.brf','adm/admloginuser.brf','admloginuser.brf','admin2.brf','admin2/login.brf','admin2/index.brf','usuarios/login.brf',
+'adm/index.brf','adm.brf','affiliate.brf','adm_auth.brf','memberadmin.brf','administratorlogin.brf','cpanel','cpanel.php','cpanel.html',]
+    for path in paths:
+        try:
+            r = requests.get(f"https://{url}/{path}")
+            if r.statue_code == 200:
+                print(f'{Fore.YELLOW}Page:{Fore.GREEN} {path} Found!')
+        except(requests.ConnectionError,requests.HTTPError,Exception,):
+            print(f"{Fore.YELLOW}Page:{Fore.RED} {path} Not Found!")
+    try_lf()
+def try_lf():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_1()
+    elif try_again == 'n':
+        try_to_mainmenu()
+    else:
+        try_lf()
+def try_to_mainmenu():
+    try_again = input("\nDo You Want To Back Login Finder Menu? [y/n] ")
+    if try_again == 'y':
+        menu()
+    elif try_again == 'n':
+        try_to_login_finder()
+    else:
+        try_to_mainmenu()
+def try_to_login_finder():
+    try_again = input("\nDo You Want To Start Login Finder (fe)? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_1()
+    elif try_again == 'n':
+        try_to_mainmenu()
+    else:
+        try_to_login_finder()
+
+def try_lf_2():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_2()
+    elif try_again == 'n':
+        try_to_mainmenu_2()
+    else:
+        try_lf_2()
+def try_to_mainmenu2():
+    try_again = input("\nDo You Want To Back Main Menu? [y/n] ")
+    if try_again == 'y':
+        black_2()
+    else:
+        black_2()
+def login_finder_opt_2():
+    cls()
+    file_n = input("Please, Enter File Name: ")
+    print("\n")
+    file = open(file_n,"r").readlines()
+    print("PLease, Enter URL!")
+    url = input("\nhttps://")
+    print("\n")
+    for path in file:
+        try:
+            if url.lower() == "https://" or url.lower() == "http://":
+                try:
+                    r = requests.get(url)
+                    if r.statue_code == 200:
+                        print(f"{Fore.YELLOW}Page:{Fore.GREEN} {path} Found!")
+                except (requests.ConnectionError,requests.HTTPError,Exception,):
+                    print(f"{Fore.YELLOW}Page:{Fore.RED} {path} Not Found!")
+            else:
+                r = requests.get(f"https://{url}/{path}")
+                if r.statue_code == 200:
+                    print(f"{Fore.YELLOW}Page:{Fore.GREEN} {path} Found!")
+        except (requests.ConnectionError,requests.HTTPError,Exception,):
+            print(f"{Fore.YELLOW}Page:{Fore.RED} {path} Not Found!")
+    try_login_f_f()
+def try_login_f_f():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_2()
+    elif try_again == 'n':
+        try_to_mainmenu()
+    else:
+        try_login_f_f()
+def login_finder_2():
+    cls()
+    print("{1}.Black-Tool Wp List")
+    print("{2}.enter wp admin list file")
+    print("{99}.Exit")
+    choose = input("Enter: ")
+    print("\n")
+    if choose == '1':
+        login_finder_opt_3()
+    elif choose == '2':
+        login_finder_opt_4()
+    elif choose == '99' or choose.lower() == 'exit' or choose.lower() == 'quit':
+        black_2()
+    else:
+        cls()
+        print(f"{Fore.YELLOW}{choose}{Fore.RED} Not Found!")
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            login_finder_2()
+        else:
+            login_finder_2()
+def login_finder_opt_3():
+    cls()
+    print("Please, Enter URL!\n")
+    url = input("https://")
+    time.sleep(1)
+    paths = ['admin/','administrator/','login.php','administration/','admin1/','admin2/','admin3/','admin4/','admin5/','moderator/','webadmin/','adminarea/','bb-admin/','adminLogin/','admin_area/','panel-administracion/','instadmin/',
+'memberadmin/','administratorlogin/','adm/','account.asp','admin/account.asp','admin/index.asp','admin/login.asp','admin/admin.asp','/login.aspx',
+'admin_area/admin.asp','admin_area/login.asp','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/admin.html','admin_area/login.html','admin_area/index.html','admin_area/index.asp','bb-admin/index.asp','bb-admin/login.asp','bb-admin/admin.asp',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','admin/controlpanel.html','admin.html','admin/cp.html','cp.html',
+'administrator/index.html','administrator/login.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html','moderator.html',
+'moderator/login.html','moderator/admin.html','account.html','controlpanel.html','admincontrol.html','admin_login.html','panel-administracion/login.html',
+'admin/home.asp','admin/controlpanel.asp','admin.asp','pages/admin/admin-login.asp','admin/admin-login.asp','admin-login.asp','admin/cp.asp','cp.asp',
+'administrator/account.asp','administrator.asp','acceso.asp','login.asp','modelsearch/login.asp','moderator.asp','moderator/login.asp','administrator/login.asp',
+'moderator/admin.asp','controlpanel.asp','admin/account.html','adminpanel.html','webadmin.html','administration','pages/admin/admin-login.html','admin/admin-login.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','user.asp','user.html','admincp/index.asp','admincp/login.asp','admincp/index.html',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','adminarea/index.html','adminarea/admin.html','adminarea/login.html',
+'panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html','admin/admin_login.html',
+'admincontrol/login.html','adm/index.html','adm.html','admincontrol.asp','admin/account.asp','adminpanel.asp','webadmin.asp','webadmin/index.asp',
+'webadmin/admin.asp','webadmin/login.asp','admin/admin_login.asp','admin_login.asp','panel-administracion/login.asp','adminLogin.asp',
+'admin/adminLogin.asp','home.asp','admin.asp','adminarea/index.asp','adminarea/admin.asp','adminarea/login.asp','admin-login.html',
+'panel-administracion/index.asp','panel-administracion/admin.asp','modelsearch/index.asp','modelsearch/admin.asp','administrator/index.asp',
+'admincontrol/login.asp','adm/admloginuser.asp','admloginuser.asp','admin2.asp','admin2/login.asp','admin2/index.asp','adm/index.asp',
+'adm.asp','affiliate.asp','adm_auth.asp','memberadmin.asp','administratorlogin.asp','siteadmin/login.asp','siteadmin/index.asp','siteadmin/login.html','memberadmin/','administratorlogin/','adm/','admin/account.php','admin/index.php','admin/login.php','admin/admin.php','admin/account.php',
+'admin_area/admin.php','admin_area/login.php','siteadmin/login.php','siteadmin/index.php','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.php','bb-admin/index.php','bb-admin/login.php','bb-admin/admin.php','admin/home.php','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.php','admin.php','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.php','cp.php','administrator/index.php','administrator/login.php','nsw/admin/login.php','webadmin/login.php','admin/admin_login.php','admin_login.php',
+'administrator/account.php','administrator.php','admin_area/admin.html','pages/admin/admin-login.php','admin/admin-login.php','admin-login.php',
+'bb-admin/index.html','bb-admin/login.html','acceso.php','bb-admin/admin.html','admin/home.html','login.php','modelsearch/login.php','moderator.php','moderator/login.php',
+'moderator/admin.php','account.php','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.php','admincontrol.php',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.php','adminarea/index.html','adminarea/admin.html',
+'webadmin.php','webadmin/index.php','webadmin/admin.php','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.php','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.php','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.php','wp-login.php','adminLogin.php','admin/adminLogin.php','home.php','admin.php','adminarea/index.php',
+'adminarea/admin.php','adminarea/login.php','panel-administracion/index.php','panel-administracion/admin.php','modelsearch/index.php',
+'modelsearch/admin.php','admincontrol/login.php','adm/admloginuser.php','admloginuser.php','admin2.php','admin2/login.php','admin2/index.php','usuarios/login.php',
+'adm/index.php','adm.php','affiliate.php','adm_auth.php','memberadmin.php','administratorlogin.php','adm/','admin/account.cfm','admin/index.cfm','admin/login.cfm','admin/admin.cfm','admin/account.cfm',
+'admin_area/admin.cfm','admin_area/login.cfm','siteadmin/login.cfm','siteadmin/index.cfm','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.cfm','bb-admin/index.cfm','bb-admin/login.cfm','bb-admin/admin.cfm','admin/home.cfm','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.cfm','admin.cfm','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.cfm','cp.cfm','administrator/index.cfm','administrator/login.cfm','nsw/admin/login.cfm','webadmin/login.cfm','admin/admin_login.cfm','admin_login.cfm',
+'administrator/account.cfm','administrator.cfm','admin_area/admin.html','pages/admin/admin-login.cfm','admin/admin-login.cfm','admin-login.cfm',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.cfm','modelsearch/login.cfm','moderator.cfm','moderator/login.cfm',
+'moderator/admin.cfm','account.cfm','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.cfm','admincontrol.cfm',
+'admin/adminLogin.html','acceso.cfm','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.cfm','adminarea/index.html','adminarea/admin.html',
+'webadmin.cfm','webadmin/index.cfm','webadmin/admin.cfm','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.cfm','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.cfm','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.cfm','wp-login.cfm','adminLogin.cfm','admin/adminLogin.cfm','home.cfm','admin.cfm','adminarea/index.cfm',
+'adminarea/admin.cfm','adminarea/login.cfm','panel-administracion/index.cfm','panel-administracion/admin.cfm','modelsearch/index.cfm',
+'modelsearch/admin.cfm','admincontrol/login.cfm','adm/admloginuser.cfm','admloginuser.cfm','admin2.cfm','admin2/login.cfm','admin2/index.cfm','usuarios/login.cfm',
+'adm/index.cfm','adm.cfm','affiliate.cfm','adm_auth.cfm','memberadmin.cfm','administratorlogin.cfm','adminLogin/','admin_area/','panel-administracion/','instadmin/','login.aspx',
+'memberadmin/','administratorlogin/','adm/','admin/account.aspx','admin/index.aspx','admin/login.aspx','admin/admin.aspx','admin/account.aspx',
+'admin_area/admin.aspx','admin_area/login.aspx','siteadmin/login.aspx','siteadmin/index.aspx','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.aspx','bb-admin/index.aspx','bb-admin/login.aspx','bb-admin/admin.aspx','admin/home.aspx','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.aspx','admin.aspx','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.aspx','cp.aspx','administrator/index.aspx','administrator/login.aspx','nsw/admin/login.aspx','webadmin/login.aspx','admin/admin_login.aspx','admin_login.aspx',
+'administrator/account.aspx','administrator.aspx','admin_area/admin.html','pages/admin/admin-login.aspx','admin/admin-login.aspx','admin-login.aspx',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.aspx','modelsearch/login.aspx','moderator.aspx','moderator/login.aspx',
+'moderator/admin.aspx','acceso.aspx','account.aspx','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.aspx','admincontrol.aspx',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.aspx','adminarea/index.html','adminarea/admin.html',
+'webadmin.aspx','webadmin/index.aspx','webadmin/admin.aspx','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.aspx','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.aspx','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.aspx','wp-login.aspx','adminLogin.aspx','admin/adminLogin.aspx','home.aspx','admin.aspx','adminarea/index.aspx',
+'adminarea/admin.aspx','adminarea/login.aspx','panel-administracion/index.aspx','panel-administracion/admin.aspx','modelsearch/index.aspx',
+'modelsearch/admin.aspx','admincontrol/login.aspx','adm/admloginuser.aspx','admloginuser.aspx','admin2.aspx','admin2/login.aspx','admin2/index.aspx','usuarios/login.aspx',
+'adm/index.aspx','adm.aspx','affiliate.aspx','adm_auth.aspx','memberadmin.aspx','administratorlogin.aspx','memberadmin/','administratorlogin/','adm/','admin/account.js','admin/index.js','admin/login.js','admin/admin.js','admin/account.js',
+'admin_area/admin.js','admin_area/login.js','siteadmin/login.js','siteadmin/index.js','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.js','bb-admin/index.js','bb-admin/login.js','bb-admin/admin.js','admin/home.js','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.js','admin.js','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.js','cp.js','administrator/index.js','administrator/login.js','nsw/admin/login.js','webadmin/login.js','admin/admin_login.js','admin_login.js',
+'administrator/account.js','administrator.js','admin_area/admin.html','pages/admin/admin-login.js','admin/admin-login.js','admin-login.js',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.js','modelsearch/login.js','moderator.js','moderator/login.js',
+'moderator/admin.js','account.js','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.js','admincontrol.js',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.js','adminarea/index.html','adminarea/admin.html',
+'webadmin.js','webadmin/index.js','acceso.js','webadmin/admin.js','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.js','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.js','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.js','wp-login.js','adminLogin.js','admin/adminLogin.js','home.js','admin.js','adminarea/index.js',
+'adminarea/admin.js','adminarea/login.js','panel-administracion/index.js','panel-administracion/admin.js','modelsearch/index.js',
+'modelsearch/admin.js','admincontrol/login.js','adm/admloginuser.js','admloginuser.js','admin2.js','admin2/login.js','admin2/index.js','usuarios/login.js',
+'adm/index.js','adm.js','affiliate.js','adm_auth.js','memberadmin.js','administratorlogin.js','bb-admin/index.cgi','bb-admin/login.cgi','bb-admin/admin.cgi','admin/home.cgi','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.cgi','admin.cgi','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.cgi','cp.cgi','administrator/index.cgi','administrator/login.cgi','nsw/admin/login.cgi','webadmin/login.cgi','admin/admin_login.cgi','admin_login.cgi',
+'administrator/account.cgi','administrator.cgi','admin_area/admin.html','pages/admin/admin-login.cgi','admin/admin-login.cgi','admin-login.cgi',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.cgi','modelsearch/login.cgi','moderator.cgi','moderator/login.cgi',
+'moderator/admin.cgi','account.cgi','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.cgi','admincontrol.cgi',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.cgi','adminarea/index.html','adminarea/admin.html',
+'webadmin.cgi','webadmin/index.cgi','acceso.cgi','webadmin/admin.cgi','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.cgi','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.cgi','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.cgi','wp-login.cgi','adminLogin.cgi','admin/adminLogin.cgi','home.cgi','admin.cgi','adminarea/index.cgi',
+'adminarea/admin.cgi','adminarea/login.cgi','panel-administracion/index.cgi','panel-administracion/admin.cgi','modelsearch/index.cgi',
+'modelsearch/admin.cgi','admincontrol/login.cgi','adm/admloginuser.cgi','admloginuser.cgi','admin2.cgi','admin2/login.cgi','admin2/index.cgi','usuarios/login.cgi',
+'adm/index.cgi','adm.cgi','affiliate.cgi','adm_auth.cgi','memberadmin.cgi','administratorlogin.cgi','admin_area/admin.brf','admin_area/login.brf','siteadmin/login.brf','siteadmin/index.brf','siteadmin/login.html','admin/account.html','admin/index.html','admin/login.html','admin/admin.html',
+'admin_area/index.brf','bb-admin/index.brf','bb-admin/login.brf','bb-admin/admin.brf','admin/home.brf','admin_area/login.html','admin_area/index.html',
+'admin/controlpanel.brf','admin.brf','admincp/index.asp','admincp/login.asp','admincp/index.html','admin/account.html','adminpanel.html','webadmin.html',
+'webadmin/index.html','webadmin/admin.html','webadmin/login.html','admin/admin_login.html','admin_login.html','panel-administracion/login.html',
+'admin/cp.brf','cp.brf','administrator/index.brf','administrator/login.brf','nsw/admin/login.brf','webadmin/login.brfbrf','admin/admin_login.brf','admin_login.brf',
+'administrator/account.brf','administrator.brf','acceso.brf','admin_area/admin.html','pages/admin/admin-login.brf','admin/admin-login.brf','admin-login.brf',
+'bb-admin/index.html','bb-admin/login.html','bb-admin/admin.html','admin/home.html','login.brf','modelsearch/login.brf','moderator.brf','moderator/login.brf',
+'moderator/admin.brf','account.brf','pages/admin/admin-login.html','admin/admin-login.html','admin-login.html','controlpanel.brf','admincontrol.brf',
+'admin/adminLogin.html','adminLogin.html','admin/adminLogin.html','home.html','rcjakar/admin/login.brf','adminarea/index.html','adminarea/admin.html',
+'webadmin.brf','webadmin/index.brf','webadmin/admin.brf','admin/controlpanel.html','admin.html','admin/cp.html','cp.html','adminpanel.brf','moderator.html',
+'administrator/index.html','administrator/login.html','user.html','administrator/account.html','administrator.html','login.html','modelsearch/login.html',
+'moderator/login.html','adminarea/login.html','panel-administracion/index.html','panel-administracion/admin.html','modelsearch/index.html','modelsearch/admin.html',
+'admincontrol/login.html','adm/index.html','adm.html','moderator/admin.html','user.brf','account.html','controlpanel.html','admincontrol.html',
+'panel-administracion/login.brf','wp-login.brf','adminLogin.brf','admin/adminLogin.brf','home.brf','admin.brf','adminarea/index.brf',
+'adminarea/admin.brf','adminarea/login.brf','panel-administracion/index.brf','panel-administracion/admin.brf','modelsearch/index.brf',
+'modelsearch/admin.brf','admincontrol/login.brf','adm/admloginuser.brf','admloginuser.brf','admin2.brf','admin2/login.brf','admin2/index.brf','usuarios/login.brf',
+'adm/index.brf','adm.brf','affiliate.brf','adm_auth.brf','memberadmin.brf','administratorlogin.brf','cpanel','cpanel.php','cpanel.html',]
+    for path in paths:
+        try:
+            r = requests.get(f"https://{url}/{path}")
+            if r.statue_code == 200:
+                print(f'{Fore.YELLOW}Page:{Fore.GREEN} {path} Found!')
+        except(requests.ConnectionError,requests.HTTPError,Exception,):
+            print(f"{Fore.YELLOW}Page:{Fore.RED} {path} Not Found!")
+    try_lf_3()
+def login_finder_opt_4():
+    cls()
+    file_n = input("Please, Enter File Name: ")
+    print("\n")
+    file = open(file_n,"r").readlines()
+    print("PLease, Enter URL!")
+    url = input("\nhttps://")
+    print("\n")
+    for path in file:
+        try:
+            if url.lower() == "https://" or url.lower() == "http://":
+                pass
+            else:
+                r = requests.get(f"https://{url}/{path}")
+                if r.statue_code == 200:
+                    print(f"{Fore.YELLOW}Page:{Fore.GREEN} {path} Found!")
+        except (requests.ConnectionError,requests.HTTPError,Exception,):
+            print(f"{Fore.YELLOW}Page:{Fore.RED} {path} Not Found!")
+    try_lf_4()
+def try_lf_2(): 
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_3()
+    elif try_again == 'n':
+        try_to_mainmenu_2()
+    else:
+        try_lf_2()
+def try_lf_4():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_4()
+    elif try_again == 'n':
+        try_to_mainmenu_2()
+    else:
+        try_lf_4()
+def try_lf_3():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_3()
+    elif try_again == 'n':
+        try_to_mainmenu_2()
+    else:
+        try_lf_3()
+def try_to_mainmenu_2():
+    try_again = input("\nDo You Want To Back Main Menu? [y/n] ")
+    if try_again == 'y':
+        black_2()
+    elif try_again == 'n':
+        try_to_login_finder_2()
+    else:
+        try_to_mainmenu_2()
+def try_to_mainmenu_2():
+    try_again = input("\nDo You Want To Back Main Menu? [y/n] ")
+    if try_again == 'y':
+        black_2()
+    elif try_again == 'n':
+        try_to_login_finder_2()
+    else:
+        try_to_mainmenu_2()
+def try_to_login_finder_2():
+    try_again = input("\nDo You Want To Start Login Finder (Fe)? [y/n] ")
+    if try_again == 'y':
+        login_finder_2()
+    elif try_again == 'n':
+        try_to_mainmenu()
+    else:
+        try_to_login_finder_2()
+def try_to_login_finder_3():
+    try_again = input("\nDo You Want To Start Login Finder (Fe)? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_3()
+    elif try_again == 'n':
+        try_to_mainmenu_3()
+    else:
+        try_to_login_finder_3()
+def try_to_login_finder_4():
+    try_again = input("\nDo You Want To Start Login Finder (Fe)? [y/n] ")
+    if try_again == 'y':
+        login_finder_opt_4()
+    elif try_again == 'n':
+        try_to_mainmenu_4()
+    else:
+        try_to_login_finder_4()
+def try_to_mainmenu_3():
+    try_again = input("\nDo You Want To Back Main Menu? [y/n] ")
+    if try_again == 'y':
+        black_2()
+    elif try_again == 'n':
+        try_to_login_finder_3()
+    else:
+        try_to_mainmenu_3()
+def try_to_mainmenu_4():
+    try_again = input("\nDo You Want To Back Main Menu? [y/n] ")
+    if try_again == 'y':
+        black_2()
+    elif try_again == 'n':
+        try_to_login_finder_4()
+    else:
+        try_to_mainmenu_4()
+def try178():
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        black_2()
+    else:
+        black_2()
 def try34():
     try:
         try:
@@ -872,6 +1568,146 @@ def try_to_black_menu():
         menu()
     else:
         menu()
+def black_software():
+    cls()
+    print("{1}.Website")
+    print("{2}.Github")
+    print("{3}.Instagram")
+    print("{99}.Exit")
+    choose = input(opt)
+    if choose == '1':
+        print("Opening Black Software Website...\n")
+        time.sleep(2)
+        window = Tk()
+        window.title('Black-Webbrowser/Black-Software')
+        try:
+           b_w = tkinterweb.HtmlFrame(window)
+           b_w.load_website('https://blacksoftware.ir')
+           b_w.pack(fill='both',expand=True)
+        except (Exception,):
+            print(False)
+            window.destroy()
+        window.geometry("500x400")
+        window.mainloop()
+    elif choose == '2':
+        print("Opening Black Software Github...\n")
+        time.sleep(2)
+        window = Tk()
+        window.title('Black-Webbrowser/Black-Software')
+        try:
+           b_w = tkinterweb.HtmlFrame(window)
+           b_w.load_website('https://github.com/black-software-com')
+           b_w.pack(fill='both',expand=True)
+        except (Exception,):
+            print(False)
+            window.destroy()
+        window.geometry("500x400")
+        window.mainloop()
+    elif choose == '3':
+        print("Opening Black Software Instagram...\n")
+        time.sleep(2)
+        window = Tk()
+        window.title('Black-Webbrowser/Black-Software')
+        try:
+           b_w = tkinterweb.HtmlFrame(window)
+           b_w.load_website('https://instagram.com/black_software_company')
+           b_w.pack(fill='both',expand=True)
+        except (Exception,):
+            print(False)
+            window.destroy()
+        window.geometry("500x400")
+        window.mainloop()
+    elif choose == '' or choose == ' ':
+        black_software()
+    elif choose == '99' or choose.lower() == 'exit' or choose.lower() == 'quit':
+        menu()
+    else:
+        cls()
+        print(f"{Fore.GREEN}{choose}{Fore.RED} Not Found! {color.red}")
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            black_software()
+        else:
+            black_software()
+def black_software_2():
+    cls()
+    print("{1}.Website")
+    print("{2}.Github")
+    print("{3}.Instagram")
+    print("{99}.Exit")
+    choose = input(opt)
+    if choose == '1':
+        print("Opening Black Software Website...\n")
+        time.sleep(2)
+        window = Tk()
+        window.title('Black-Webbrowser/Black-Software')
+        try:
+           b_w = tkinterweb.HtmlFrame(window)
+           b_w.load_website('https://blacksoftware.ir')
+           b_w.pack(fill='both',expand=True)
+        except (Exception,):
+            print(False)
+            window.destroy()
+        window.geometry("500x400")
+        window.mainloop()
+    elif choose == '2':
+        print("Opening Black Software Github...\n")
+        time.sleep(2)
+        window = Tk()
+        window.title('Black-Webbrowser/Black-Software')
+        try:
+           b_w = tkinterweb.HtmlFrame(window)
+           b_w.load_website('https://github.com/black-software-com')
+           b_w.pack(fill='both',expand=True)
+        except (Exception,):
+            print(False)
+            window.destroy()
+        window.geometry("500x400")
+        window.mainloop()
+    elif choose == '3':
+        print("Opening Black Software Instagram...\n")
+        time.sleep(2)
+        window = Tk()
+        window.title('Black-Webbrowser/Black-Software')
+        try:
+           b_w = tkinterweb.HtmlFrame(window)
+           b_w.load_website('https://instagram.com/black_software_company')
+           b_w.pack(fill='both',expand=True)
+        except (Exception,):
+            print(False)
+            window.destroy()
+        window.geometry("500x400")
+        window.mainloop()
+    elif choose == '' or choose == ' ':
+        black_software_2()
+    elif choose == '99' or choose.lower() == 'exit' or choose.lower() == 'quit':
+        black_2()
+    else:
+        cls()
+        print(f"{Fore.GREEN}{choose}{Fore.RED} Not Found! {color.red}")
+        try_again = input("\npress Enter...")
+        if try_again == '':
+            black_software_2()
+        else:
+            black_software_2()
+def send_blackfeedback():
+    cls()
+    print(f"{color.green} Opening Black Software Website... {color.end}\n")
+    webbrowser.open_new_tab('')
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        menu()
+    else:
+        menu()
+def send_blackfeedback_2():
+    cls()
+    print(f"{color.green} Opening Black Software Website... {color.end}\n")
+    webbrowser.open_new_tab('')
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        black_2()
+    else:
+        black_2()
 def Black_Tool_Start():
     cls()
     command("figlet Black Tool|lolcat")
@@ -1775,7 +2611,7 @@ def screen():
     print(color.blue + """
          ███████████  ████                     █████         ███████████                   ████
         ░░███░░░░░███░░███                    ░░███         ░█░░░███░░░█                  ░░███
-         ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███ """ + color.green + "Black Tool: " + color.blue + Black_Tool_Version + color.blue + """
+         ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███ """ + color.green + "Black Tool: " + color.red + Black_Tool_Version + color.blue + """
          ░██████████  ░███  ░░░░░███  ███░░███ ░███░░███        ░███     ███░░███ ███░░███ ░███
          ░███░░░░░███ ░███   ███████ ░███ ░░░  ░██████░         ░███    ░███ ░███░███ ░███ ░███
          ░███    ░███ ░███  ███░░███ ░███  ███ ░███░░███        ░███    ░███ ░███░███ ░███ ░███
@@ -2907,7 +3743,8 @@ def check_internet():
         if start_ch.status_code == 200:
             print("\nInternet Connected... ;)\n")
             st = Speedtest()
-            messagebox.showinfo('Black Tool-Speed Test',f'Upload: {st.upload()}\nDownload: {st.download()}')
+            
+            showinfo('Black Tool-Speed Test',f'Upload: {st.upload()}\nDownload: {st.download()}')
             try_to_menu_130()
     except requests.ConnectionError:
         print("\nPlease, Check Internet...\n")
@@ -2920,7 +3757,7 @@ def check_internet_b_2():
         if start_ch.status_code == 200:
           print("\nInternet Connected... ;)\n")
           st = Speedtest()
-          messagebox.showinfo('Black Tool-Speed Test',f'Upload: {st.upload()}\nDownload: {st.download()}')
+          showinfo('Black Tool-Speed Test',f'Upload: {st.upload()}\nDownload: {st.download()}')
           try_to_menu_131()
     except requests.ConnectionError:
         print("\nPlease, Check Internet...\n")
@@ -3155,7 +3992,7 @@ def try25():
     else:
         menu()
 def banner():
-    print(color.red + "                                                                          ® " + color.blue+ """
+    print(color.red + "                                                                          ® " + color.blue + """
          ███████████  ████                     █████         ███████████                   ████
         ░░███░░░░░███░░███                    ░░███         ░█░░░███░░░█                  ░░███
          ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███
@@ -3589,6 +4426,7 @@ def black_soialenginners():
     print("{2}.focial")
     print("{3}.fluxion")
     print("{4}.Insta Hack")
+    print("{5}.Spam")
     print("{99}.Main menu")
     choose7 = input(opt)
     if choose7 == '1':
@@ -3606,6 +4444,10 @@ def black_soialenginners():
     elif choose7 == '4':
         cls()
         command(f"cd {folder_n} && git clone https://github.com/fuck3erboy/instahack")
+        try22()
+    elif choose7 == '5':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/aws/serverless-application-model")
         try22()
     elif choose7 == '99':
         menu()
@@ -3628,6 +4470,7 @@ def black_soialenginners_2():
     print("{2}.focial")
     print("{3}.fluxion")
     print("{4}.Insta Hack")
+    print("{5}.Spam")
     print("{99}.Main menu")
     choose7 = input(opt)
     if choose7 == '1':
@@ -3645,6 +4488,10 @@ def black_soialenginners_2():
     elif choose7 == '4':
         cls()
         command(f"cd {folder_n} && git clone https://github.com/fuck3erboy/instahack")
+        try56()
+    elif choose7 == '5':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/aws/serverless-application-model")
         try56()
     elif choose7 == '99':
         black_2()
@@ -3678,6 +4525,12 @@ def black_Hackingtools():
     print("{7}.Hacking")
     print("{8}.M3MO")
     print("{9}.Lazymux")
+    print("{10}.Shodan Eye")
+    print("{11}.Sn1per")
+    print("{12}.Xhh")
+    print("{13}.Nettatacker")
+    print("{14}.Katana")
+    print("{15}.Add")
     print("{99}.Main menu")
     choose7 = input(opt)
     if choose7 == '1':
@@ -3716,6 +4569,27 @@ def black_Hackingtools():
         cls()
         command(f"cd {folder_n} && git clone https://github.com/Gameye98/Lazymux")
         try16()
+    elif choose7 == '10':
+        cls()
+        command(f"cd {folder_n} && git clone git clone https://github.com/BullsEye0/shodan-eye")
+        try16()
+    elif choose7 == '11':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/1N3/Sn1per")
+        try16()
+    elif choose7 == '12':
+        cls()
+        command(f"cd {folder_n} && git clone https://https://github.com/xxh/xxh")
+        try16()
+    elif choose7 == '13':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/OWASP/Nettacker")
+        try16()
+    elif choose7 == '14':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/TebbaaX/Katana")
+    elif choose7 == '15':
+        add_tool()
     elif choose7 == '99':
         menu()
     elif choose7 == '' or choose7 == ' ':
@@ -3748,6 +4622,12 @@ def black_Hackingtools_2():
     print("{7}.Hacking")
     print("{8}.M3MO")
     print("{9}.Lazymux")
+    print("{10}.Shodan Eye")
+    print("{11}.Sn1per")
+    print("{12}.Xhh")
+    print("{13}.Nettatacker")
+    print("{14}.Katana")
+    print("{15}.Add")
     print("{99}.Main menu")
     choose7 = input(opt)
     if choose7 == '1':
@@ -3786,6 +4666,27 @@ def black_Hackingtools_2():
         cls()
         command(f"cd {folder_n} && git clone https://github.com/Gameye98/Lazymux")
         try64()
+    elif choose7 == '10':
+        cls()
+        command(f"cd {folder_n} && git clone git clone https://github.com/BullsEye0/shodan-eye")
+        try64()
+    elif choose7 == '11':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/1N3/Sn1per")
+        try64()
+    elif choose7 == '12':
+        cls()
+        command(f"cd {folder_n} && git clone https://https://github.com/xxh/xxh")
+        try64()
+    elif choose7 == '13':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/OWASP/Nettacker")
+        try64()
+    elif choose7 == '14':
+        cls()
+        command(f"cd {folder_n} && git clone https://github.com/TebbaaX/Katana")
+    elif choose7 == '15':
+        add_tool_2()
     elif choose7 == '99':
         black_2()
     elif choose7 == '' or choose7 == ' ':
@@ -3798,6 +4699,48 @@ def black_Hackingtools_2():
             black_Hackingtools_2()
         else:
             black_Hackingtools_2()
+def add_tool():
+    cls()
+    print("Please, enter Tool Link: ")
+    tool_link = input("\nlink -> ")
+    print("\n")
+    subprocess.getoutput(f"git clone {tool_link}")
+    try_again_add()
+def add_tool_2():
+    cls()
+    print("Please, enter Tool Link: ")
+    tool_link = input("\nlink -> ")
+    print("\n")
+    subprocess.getoutput(f"git clone {tool_link}")
+    try_again_add_2()
+def try132():
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        menu()
+    else:
+        menu()
+def try133():
+    try_again = input("\npress Enter...")
+    if try_again == '':
+        black_2()
+    else:
+        black_2()
+def try_again_add():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        add_tool()
+    elif try_again == 'n':
+        try132()
+    else:
+        try_again_add_2()
+def try_again_add_2():
+    try_again = input("\nDo You Want To Try Again? [y/n] ")
+    if try_again == 'y':
+        add_tool_2()
+    elif try_again == 'n':
+        try133()
+    else:
+        try_again_add_2()
 def try7():
     try_to_whois_attack = input("\nDo you want to try again? [y/n] ")
     if try_to_whois_attack == 'y':
@@ -4039,7 +4982,7 @@ def black_tool_developer():
     cls()
     command("figlet -f slant Black-Tool|lolcat")
     print(color.green + "\nThis code write by " + color.blue + info["Developer"] + color.End)
-    print(color.prlblue + "\nProgramm Name: " + color.red + info["CodeName"] + color.End)
+    print(color.prlblue + "\nProgram Name: " + color.red + info["Tool Name"] + color.End)
     print(color.red + "\nVersion: " + color.darkblue + info["Version"] + color.End)
     print(color.org + "\nGithub: " + color.green + info["Home"] + color.End)
     time.sleep(2)
@@ -4049,7 +4992,7 @@ def black_tool_developer_2():
     cls()
     command("figlet -f slant Black-Tool|lolcat")
     print(color.green + "\nThis code write by " + color.blue + info["Developer"] + color.End)
-    print(color.prlblue + "\nProgramm Name: " + color.red + info["CodeName"] + color.End)
+    print(color.prlblue + "\nProgram Name: " + color.red + info["Tool Name"] + color.End)
     print(color.red + "\nVersion: " + color.darkblue + info["Version"] + color.End)
     print(color.org + "\nGithub: " + color.green + info["Home"] + color.End)
     time.sleep(2)
@@ -4057,7 +5000,17 @@ def black_tool_developer_2():
 def try57():
     try_to_soi = input("\nDo you want to open Developer Github? [y/n] ")
     if try_to_soi == 'y':
-      webbrowser.open_new("https://github.com/mrprogrammer2938")
+      window = Tk()
+      window.title('Black-Webbrowser/Dev')
+      try:
+          b_w = tkinterweb.HtmlFrame(window)
+          b_w.load_website('https://github.com/mrprogrammer2938')
+          b_w.pack(fill='both',expand=True)
+      except (Exception,):
+          print(False)
+          window.destroy()
+      window.geometry("500x400")
+      window.mainloop()
       try58()
     elif try_to_soi == 'n':
         try58()
@@ -4066,7 +5019,17 @@ def try57():
 def try60():
     try_to_soi = input("\nDo you want to open Developer Github? [y/n] ")
     if try_to_soi == 'y':
-      webbrowser.open_new("https://github.com/mrprogrammer2938")
+      window = Tk()
+      window.title('Black-Webbrowser/Dev')
+      try:
+          b_w = tkinterweb.HtmlFrame(window)
+          b_w.load_website('https://github.com/mrprogrammer2938')
+          b_w.pack(fill='both',expand=True)
+      except (Exception,):
+          print(False)
+          window.destroy()
+      window.geometry("500x400")
+      window.mainloop()
       try59()
     elif try_to_soi == 'n':
         try59()
@@ -4223,8 +5186,7 @@ if __name__ == '__main__':
       print("\nPlease, Usage: --help\n")
       time.sleep(0.15)
       sys.exit()
-# Black-Tool 4.0.0
-# Theme = Blue
+# Black-Tool v5.0.0
 '''
 --------------------------------------
 If you want to help update, fork     |
