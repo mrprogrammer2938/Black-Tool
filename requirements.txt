@@ -8,4 +8,6 @@ ipapi
 playsound
 deep_translator
 tk-tools
+tkinterweb
+ttkbootstrap
 PIL
