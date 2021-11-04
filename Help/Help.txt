@@ -1,15 +1,21 @@
+Black-Tool For (Linux,Windows,MacOS):
+
 Installing:
             
             git clone https://github.com/mrprgrammer2938/Black-Tool
             
             cd Black-Tool
             
-            python3 inatall.py
-            
-            python3 hack --help
+            python3 inatall.sh
+------------------------------------------------------------------------------------------
+Run:
+     python black --start
 ------------------------------------------------------------------------------------------
 Argument:
-    Black-Tool Usage:
+           python black --help
+            
+           Black-Tool Usage:
+           
                   --start start Hack Menu!
                   --install + pkg
                   --clone + Repositories
@@ -17,14 +23,14 @@ Argument:
                   --help + Black-Tool Help
                   --banner | Show Black-Tool Banner
                   --scan portscan | dos
--------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 Updating:
            
            cd Update
            
            ./update
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 Uninstalling:
               
               python3 uninstall.py
@@ -32,3 +38,13 @@ Uninstalling:
               or
  
               bash uninstall.sh
+------------------------------------------------------------------------------------------
+Black-Tool For Termux:
+
+git clone https://github.com/mrprogrammer2938/Black-Tool-Termux
+
+cd Black-Tool-Termux
+
+bash install.sh
+
+python hack
