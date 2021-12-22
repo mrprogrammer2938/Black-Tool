@@ -210,5 +210,6 @@ python3 uninstall.py
 gg1504722@gmail.com
 mrprogrammer2938@gmail.com
 blacksoftwarecompany3@gmail.com
+blacksoftwares3@gmail.com (Support)
 ```
 <br>
