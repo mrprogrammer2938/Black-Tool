@@ -9,7 +9,7 @@
 if [[ "$(id -u)" -ne 0 ]]; then
   echo "Please, Run This Programm as Root!"
   exit 1
-fi 
+fi
 function ext() {
   clear
   echo "Exiting..."
@@ -42,8 +42,10 @@ Black-Tool Installed!
 function choose_os() {
     clear
     echo "" 
-    echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ v4.0.0"
-    echo " █▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄"
+    echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ 
+█░░ v4.0.0"
+    echo " █▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ 
+█▄▄"
     echo ""
     echo "
 Choose OS:
@@ -54,16 +56,16 @@ Choose OS:
 "
     printf "choose/> "
     read choose
-    if [[ "$choose" == '1']];
+    if [["$choose" == '1']];
     then
       try1
-    elif [[ "$choose" == '2']];
+    elif [["$choose" == '2']];
     then
       windows_installing
-    elif [[ "$choose" == '3']];
+    elif [["$choose" == '3']];
     then
       termux_installing
-    elif [[ "$choose" == '99']];
+    elif [["$choose" == '99']];
     then
       clear
       echo "
@@ -78,8 +80,10 @@ try1() {
   printf '\033]2;Black-Tool-Installing/color\a'
   clear
   echo "" 
-  echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ v4.0.0"
-  echo " █▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄"
+  echo " █▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ 
+█░░ v4.0.0"
+  echo " █▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ 
+█▄▄"
   echo ""
   echo "color:
      {1}.red
@@ -170,3 +174,4 @@ Please, Check Internet!
       fi
 }
 check
+
