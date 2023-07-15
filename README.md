@@ -176,7 +176,8 @@ cd Update
 
 ##### Uninstalling
 ``` sh
-bash uninstall.sh
+cd ..
+rm -r black-tool
 ```
 
 ### [Mr.nope](https://github.com/mrprogrammer2938) Account...
@@ -212,6 +213,7 @@ mrprogrammer2938@gmail.com
 blacksoftwarecompany3@gmail.com
 blacksoftwares3@gmail.com (Support)
 ```
+<br>
 
 ### Wait for the good news 😃
 <br>
