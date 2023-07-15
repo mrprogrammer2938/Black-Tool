@@ -176,7 +176,7 @@ cd Update
 
 ##### Uninstalling
 ``` sh
-python3 uninstall.py
+bash uninstall.sh
 ```
 
 ### [Mr.nope](https://github.com/mrprogrammer2938) Account...
