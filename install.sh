@@ -5,11 +5,9 @@
 # Github: https://github.com/mrprogrammer2938
 # Instagram: https://instagram.com/sina.coder
 #
-
-
-cls;
+clear;
 echo ""
-echo "█▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ v4.0.0"
+echo "█▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ v5.0.0"
 echo "█▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄"
 echo ""
 echo "Black-Tool Installing"
