@@ -166,13 +166,14 @@ Black-Tool Usage:
                   --banner  | Show Black-Tool Banner
                   --scan portscan | dos
 ```
-
+<!--
 #### Update...
 ``` bash
 cd Update
 
 ./update
 ```
+-->
 <!--
 ##### Uninstalling
 ``` sh
