@@ -44,7 +44,7 @@ banner_arg = green + """
 def banner():
     print(f"""{color.green}
          ███████████  ████                     █████         ███████████                   ████ 
-        ░░███░░░░░███░░███                    ░░███         ░█░░░███░░░█                  ░░███  {color.red} ® {color.green}
+        ░░███░░░░░███░░███                    ░░███         ░█░░░███░░░█                  ░░███  {color.red} ® Black-Software {color.green}
          ░███    ░███ ░███   ██████    ██████  ░███ █████   ░   ░███  ░   ██████   ██████  ░███
          ░██████████  ░███  ░░░░░███  ███░░███ ░███░░███        ░███     ███░░███ ███░░███ ░███
          ░███░░░░░███ ░███   ███████ ░███ ░░░  ░██████░         ░███    ░███ ░███░███ ░███ ░███
@@ -382,7 +382,7 @@ Black_Tool_info = {
 }
 Black_Tool_du = dumps(Black_Tool_info)
 Black_Tool_lo = loads(Black_Tool_du)
-Black_Tool_Version = "\nBlack-Tool 4.0.0\n"
+Black_Tool_Version = "\nBlack-Tool 5.0.0\n"
 user = getpass.getuser()
 info = Black_Tool_lo
 black_Tool_date = subprocess.getoutput("date").replace("+0430","")
@@ -481,6 +481,8 @@ def try_to_start():
     else:
         try_to_start()
 def start_1(host="https://google.com"):
+    pass_login()
+    """
     try:
         c = 0
         s = 0
@@ -507,7 +509,7 @@ def start_1(host="https://google.com"):
         print(f"Please, Check {color.green}Internet{color.End} !\n")
         time.sleep(0.25)
         showerror('Black-Tool/Error','Please, Check Internet')
-        sys.exit()
+        sys.exit()"""
 def user_run():
     user_l = getpass.getuser()
     user_inp = input("\nEnter Linux User: ")
@@ -531,8 +533,10 @@ def user_run():
         print("\nUser Not Found!")
         quit
 def pass_login():
+    start_2()
+    """
     try:
-        file_pass = open("C:\\Program Files\b-pass\pass.txt","r").read()
+        file_pass = open("","r").read()
         print("{1}.Forgot Password!\n")
         password_b = getpass.getpass("\nEnter Password: ")
         if password_b == file_pass:
@@ -566,7 +570,7 @@ def pass_login():
             new_pass_b_f.write(new_pass_b)
             new_pass_b_f.close()
             time.sleep(0.50)
-            pass_login()
+            pass_login()"""
 def try_to_start_4():
     try_134 = input("\npress Enter...")
     if try_134 == '':
@@ -586,7 +590,12 @@ def try_to_mf():
     time.sleep(1)
     cls()
     global folder_n
-    folder_n = input("Enter Folder Name: ")
+    while True:
+        folder_n = input("Enter Folder Name: ")
+        if folder_n == "" or folder_n == " ":
+         continue;
+       	else:
+             break;
     time.sleep(0.50)
     os.mkdir(folder_n)
     try_to_menu = input("\npress Enter...")
@@ -3737,6 +3746,7 @@ def sniff():
         try66()
 def check_internet():
     cls()
+    """
     print("\n----[ Checking Internet ]----\n")
     try:
         start_ch = requests.get("https://google.com")
@@ -3744,11 +3754,11 @@ def check_internet():
             print("\nInternet Connected... ;)\n")
             st = Speedtest()
             
-            showinfo('Black Tool-Speed Test',f'Upload: {st.upload()}\nDownload: {st.download()}')
-            try_to_menu_130()
-    except requests.ConnectionError:
+            showinfo('Black Tool-Speed Test',f'Upload: {st.upload()}\nDownload: {st.download()}')"""
+    try_to_menu_130()
+    """except requests.ConnectionError:
         print("\nPlease, Check Internet...\n")
-        sys.exit()
+        sys.exit()"""
 def check_internet_b_2():
     cls()
     print("\n----[ Checking Internet ]----\n")
