@@ -102,6 +102,7 @@ from colorama import Fore,init
 from requests.models import parse_header_links
 system = platform.uname()[0]
 Black_Tool_Run_Err = "\nPlease, Run This Programm on Linux Or MacOS!\n"
+folder_n = "./Hack"
 s = 0
 c = 0
 # ------------- Black Tool Color ---------------
@@ -587,8 +588,10 @@ Black-Tool {Fore.RED} v{Fore.CYAN}4.0.0{color.End}\n""")
     time.sleep(2)
     try_to_mf()
 def try_to_mf():
+
     time.sleep(1)
     cls()
+    """
     global folder_n
     f = open("folder_name.txt","r").read()
     if f == "True":
@@ -604,7 +607,7 @@ def try_to_mf():
         os.mkdir(folder_n)
         f = open("folder_name.txt","w")
         f.write("False")
-        f.close()
+        f.close()"""
     try_to_menu = input("\npress Enter...")
     if try_to_menu == '':
         user_os_info()
