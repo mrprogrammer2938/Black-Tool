@@ -590,14 +590,21 @@ def try_to_mf():
     time.sleep(1)
     cls()
     global folder_n
-    while True:
-        folder_n = input("Enter Folder Name: ")
-        if folder_n == "" or folder_n == " ":
-         continue;
-       	else:
-             break;
-    time.sleep(0.50)
-    os.mkdir(folder_n)
+    f = open("folder_name.txt","r").read()
+    if os.path.exist(f):
+      pass
+    else:
+        while True:
+              folder_n = input("Enter Folder Name: ")
+              if folder_n == "" or folder_n == " ":
+                continue;
+       	      else:
+                  break;
+        time.sleep(0.50)
+        os.mkdir(folder_n)
+        f = open("folder_name.txt","w")
+        f.write(folder_n)
+        f.close()
     try_to_menu = input("\npress Enter...")
     if try_to_menu == '':
         user_os_info()
