@@ -173,13 +173,13 @@ cd Update
 
 ./update
 ```
-
+<!--
 ##### Uninstalling
 ``` sh
 cd ..
 rm -r black-tool
 ```
-
+-->
 ### [Mr.nope](https://github.com/mrprogrammer2938) Account...
 
 [Instagram](https://instagram.com/programmer2938)
