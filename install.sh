@@ -2,24 +2,21 @@
 # Black-Tool v5.0.0 (New)
 # Black-Tool Installing File
 #
-# Website: https://blacksoftware.ir
-# Github: https://github.com/black-software-com
-# Instagram: https://instagram.com/black_software_company
+# Github: https://github.com/mrprogrammer2938
+# Instagram: https://instagram.com/sina.coder
 #
 
-echo """
-█▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ v4.0.0
-█▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄
-"""
 
+cls;
+echo ""
+echo "█▄▄ █░░ ▄▀█ █▀▀ █▄▀ ▄▄ ▀█▀ █▀█ █▀█ █░░ v4.0.0"
+echo "█▄█ █▄▄ █▀█ █▄▄ █░█ ░░ ░█░ █▄█ █▄█ █▄▄"
+echo ""
 echo "Black-Tool Installing"
-
 chmod -x hack
-pip install python
-pip install python3
-pip install -r requirements.txt
-
-
+sudo apt install python
+sudo apt install python3
+python -m pip install -r requirements.txt;
 echo "Finish...!"
 echo "please Enter python hack"
-quit
+exit
