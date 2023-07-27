@@ -591,7 +591,7 @@ def try_to_mf():
     cls()
     global folder_n
     f = open("folder_name.txt","r").read()
-    if os.path.exist(f):
+    if f == "True":
       pass
     else:
         while True:
@@ -603,7 +603,7 @@ def try_to_mf():
         time.sleep(0.50)
         os.mkdir(folder_n)
         f = open("folder_name.txt","w")
-        f.write(folder_n)
+        f.write("False")
         f.close()
     try_to_menu = input("\npress Enter...")
     if try_to_menu == '':
