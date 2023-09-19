@@ -154,7 +154,7 @@ bash install.sh
 
 *Run*
 ``` sh
-python black --start
+python hack --start
 ```
 
 ### Argument Help
