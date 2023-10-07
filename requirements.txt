@@ -1,6 +1,6 @@
 pyttsx3
-requests==2.26.0
-colorama==0.0.4
+requests
+colorama
 cryptography
 pybluez
 googlesearch-python
