@@ -191,14 +191,12 @@ Black-Tool Usage:
 ``` txt
 gg1504722@gmail.com
 mrprogrammer2938@gmail.com
-blacksoftwarecompany3@gmail.com
-blacksoftwares3@gmail.com (Support)
 ```
 <br>
 
 ### [Mr.nope](https://github.com/mrprogrammer2938) Account...
 
-[Instagram](https://instagram.com/programmer2938)
+[Instagram](https://instagram.com/sina.coder)
 
 [Pinterest](https://www.pinterest.com/mrprogrammer2938)
 
