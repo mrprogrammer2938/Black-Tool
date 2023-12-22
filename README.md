@@ -168,22 +168,6 @@ Black-Tool Usage:
                   --banner  | Show Black-Tool Banner
                   --scan portscan | dos
 ```
-<!--
-#### Update...
-``` bash
-cd Update
-
-./update
-```
--->
-<!--
-##### Uninstalling
-``` sh
-cd ..
-rm -r black-tool
-```
--->
-
 <br>
 
 ### Black-Tool [Developer](https://github.com/mrprogrammer2938/Black-Tool/tree/master/Developer)
