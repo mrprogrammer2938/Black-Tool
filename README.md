@@ -1,21 +1,18 @@
-<!--
-Black-Tool v5.0.0
+l<!--
+Black-Tool v5.5.5
 Developer: Sina Meysami
 Github-Dev: https://github.com/mrprogrammer2938
-Website: https://blacksoftware.ir
 Github: https://github.com/black-software-com
-Instagram: https://instagram.com/mrprogrammer2938
-Pinterest: https://www.pinterest.com/mrprogrammer2938
-
+Instagram: https://instagram.com/sina.coder
 -->
 <center>
 
-# [Black-Tool](https://github.com/black-software-com)
+# [Black-Tool](https://github.com/mrprogrammer2938/Black-Tool)
 </center>
 
 <br>
 <!--
-Black-Tool v5.0.0
+Black-Tool v5.5.5
 -->
 <link rel='icon' href='https://github.com/black-software-com/Black-Tool/blob/master/Scr/Black_Tool_Logo.png'>
 <center>
@@ -25,19 +22,15 @@ Black-Tool v5.0.0
 </center><br>
 
 
-```Black-Tool v5.0.0 (New)```
+```Black-Tool v5.5.5 (New)```
 <hr>
 
 [![Python 3.10](https://img.shields.io/badge/Python-3.10-yellow.svg)](https://www.python.org/downloads/)   [![Python 3.7](https://img.shields.io/static/v1?label=python&message=3.7&color=red)](https://www.python.org/downloads/)
 
-#### Install the tools and start hacking Attacking !
+#### Install the tools and start hacking Attack!
 
-[Black-Tool](https://github.com/black-software-Com/black-tool) 
-<br>
+[Black-Tool](https://github.com/mrprogrammer2938/Black-Tool) 
 
-# Please Wait For Black Tool 5.5.5 (All problems are solved)
-
-<br>
 <center>
 
 ``` 
@@ -54,13 +47,13 @@ Black-Tool v5.0.0
 </center>
 <center>
 
-### This Program write by [Black-Software](https://github.com/black-software-Com)
+### This Program write by [Sina Coder](https://github.com/mrprogrammer2938)
 <br>
 
 Link | Version | Suport 
 :----:|:-------:|:------:
-[Black-Tool](https://github.com/black-software-Com/black-tool) | v5.0.0 | (Linux,Windows,MacOS)
-[Black-Tool](https://github.com/mrprogrammer2938/black-tool) | v4.0.0 | (Linux,Window,MacOS)
+[Black-Tool](https://github.com/mrprogrammer2938/black-tool) | v5.5.5 | (Linux,Windows,MacOS) 
+
 [Black-Tool](https://github.com/Black-Tool/Black-Tool) | v2.6.5 | (Linux,MacOS)
 <br>
 </center>
@@ -75,80 +68,56 @@ Link | Version | Suport
 ## Black-Tool Tools
 <br>
 
+#### Information-Gathering
+- Nmap
+- [WPScan](https://github.com/wpscanteam/wpscan)
+- [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
+- [Web Info](https://github.com/zahidin/web-information-gathering)
+- [CMS Scanner](https://github.com/ajinabraham/CMSScan)
+
 #### Web Hacking
-- [Brute Force](https://github.com/mrprogrammer2938/Brute-Force)
 - [Brutex](https://github.com/1N3/BruteX)
-- [Bruter Boom](https://github.com/Oseid/FaceBoom)
-- [Bruter](https://github.com/AzizKpln/Bruter19)
-- [Face-Book BruteForce](https://github.com/IAmBlackHacker/Facebook-BruteForce)
+- [SkipFish](https://github.com/spinkham/skipfish)
+- [Blazy](https://github.com/s0md3v/Blazy)
+- PortScanner
 
 #### Cam Hacker
-- [Cam Hacker](https://github.com/mrprogrammer2938/Cam-Hackers)
-- [Cam Hackers ang](https://github.com/AngelSecurityTeam/Cam-Hackers)
-- [Say-Cheese](https://github.com/keralahackers/saycheese)
-- [Say Master](https://github.com/joshkar/SayMaster)
-- [Cam Phish](https://github.com/techchipnet/CamPhish)
+- [Cam Hackers](https://github.com/AngelSecurityTeam/Cam-Hackers)
+- [Cam Dumper](https://github.com/erfannoori/Cam-Dumper)
+- [SEE U](https://github.com/GloveB/Cam-Hack)
+- [Cam Phish](https://github.com/baradatipu/CamPhish)
 
-#### Phishing
-- [setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
-- [zphisher](https://github.com/htr-tech/zphishe)
-- [nexphishier](https://github.com/htr-tech/nexphisher)
-- [Soial Phish](https://github.com/xHak9x/SocialPhish)
-- [Black Phish](https://github.com/iinc0gnit0/BlackPhish)
-- [Phish Mailer](https://github.com/BiZken/PhishMailer)
 
 #### Wirless Attack
-- [wifite](https://github.com/derv82/wifite)
-- [Ait Attackit](https://github.com/JoyGhoshs/Airattackit)
-- [Wirespy](https://github.com/AresS32/wirespy)
-- [Wifi God](https://github.com/waseem-sajjad/WifiGod)
-- [Wifi Cracking](https://github.com/brannondorsey/wifi-cracking)
+- [Reaver](https://github.com/t6x/reaver-wps-fork-t6x)
+- [Wifite](https://github.com/derv82/wifite)
+- [Airattackit](https://github.com/JoyGhoshs/Airattackit)
 
-#### Information-Gathering
-- [Web Info](https://github.com/mrprogrammer2938/Web-Info)
-- [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
-- [WebKiller](https://github.com/ultrasecurity/webkiller)
-- [Web Information](https://github.com/zahidin/web-information-gathering)
-- [Th3inspector](https://github.com/Moham3dRiahi/Th3inspector)
+#### Password Attack
+- [Cupp](https://github.com/Mebus/cupp)
+- [NCrack](https://github.com/nmap/ncrack)
 
-#### Social Engineer
-- [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
-- [Focial](https://github.com/v2-dev/awesome-social-engineering)
-- [Fluxion](https://github.com/FluxionNetwork/fluxion)
-- [Insta Hack](https://github.com/fuck3erboy/instahack)
+#### Dos
+- Dos
 
-#### Hacking Tools
-- [hackingtools](https://github.com/mrprogrammer2938/hackingtools)
-- [hack Tools](https://github.com/Z4nzu/hackingtool)
-- [Fsociety](https://github.com/Manisso/fsociety)
-- [PTool](https://github.com/mrprogrammer2938/PTool)
-- [onex](https://github.com/rajkumardusad/onex)
-- [Kit Hack](https://github.com/AdrMXR/KitHack)
-- [Shodan-Eye](https://github.com/BullsEye0/shodan-eye)
-- [Sn1per](https://github.com/1N3/Sn1per)
-- [XXH](https://https://github.com/xxh/xxh)
-- [Nettacker](https://github.com/OWASP/Nettacke)
-- [Katana](https://github.com/TebbaaX/Katana)
-
-#### DDos Attack
-- [DDos-Attack](https://github.com/mrprogrammer2938/DDos-Attack)
-- [hammer](https://github.com/cyweb/hammer)
-- [LITEDDOS](https://github.com/4L13299/LITEDDOS)
-- [Raven](https://github.com/Taguar258/Raven-Storm)
-- [DDos-Attack-MRX](https://github.com/Ha3MrX/DDos-Attack)
+#### Malware
+- Android
+- Windows
 
 #### Sniffing Spoofing
 - [Say Cheese](https://github.com/hangetzzu/saycheese)
-- [Say Master](https://github.com/joshkar/SayMaster)
-- [Social-Enginner-Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
+- [PyPhisher](https://github.com/KasRoudra2/PyPhisher)
+- [Storm-Breaker](https://github.com/ultrasecurity/Storm-Breaker)
+- [Setoolkit](https://github.com/trustedsec/social-engineer-toolkit)
+
 <br><br>
-<!--
+
 ### Installing View [Youtube](https://youtu.be/qPVos1R05vo)
 
 **Installing**
 
 <pre title="Installing">
-git clone https://github.com/black-software-Com/black-tool
+git clone https://github.com/mrprogrammer2938/black-tool
 
 cd Black-Tool
 
@@ -158,22 +127,9 @@ bash install.sh
 
 *Run*
 ``` sh
-python hack --start
+python3 hack 
 ```
 
-### Argument Help
-``` txt 
-Black-Tool Usage:
-                  --start   | start Hack Menu!
-                  --install   <Pkg Name>
-                  --clone     <Repositories Link>
-                  --version | Black-Tool version
-                  --help    | Black-Tool Help
-                  --banner  | Show Black-Tool Banner
-                  --scan portscan | dos
-```
-<br>
--->
 
 ### Black-Tool [Developer](https://github.com/mrprogrammer2938/Black-Tool/tree/master/Developer)
 
@@ -205,8 +161,6 @@ mrprogrammer2938@gmail.com
 
 [Pinterest](https://www.pinterest.com/mrprogrammer2938)
 
-[Black-Software](https://github.com/black-software-Com)
 
-### Wait for the good news 😃
 <br>
 
