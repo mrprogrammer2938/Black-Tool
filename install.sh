@@ -1,5 +1,5 @@
 #!/bin/env bash
-# Black-Tool v5.0.0 (New)
+# Black-Tool v5.5.5 (New)
 # Black-Tool Installing File
 #
 # Github: https://github.com/mrprogrammer2938
