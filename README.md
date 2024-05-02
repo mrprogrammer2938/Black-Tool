@@ -50,11 +50,10 @@ Black-Tool v5.5.5
 ### This Program write by [Sina Coder](https://github.com/mrprogrammer2938)
 <br>
 
-Link | Version | Suport 
-|:----:|:-------:|:------:|
-[Black-Tool](https://github.com/mrprogrammer2938/black-tool) | v5.5.5 | (Linux,Windows,MacOS) 
-
-[Black-Tool](https://github.com/Black-Tool/Black-Tool) | v2.6.5 | (Linux,MacOS)
+| Link | Version | Suport |
+|:------|:-------:|------:|
+| [Black-Tool](https://github.com/mrprogrammer2938/black-tool) | v5.5.5 | (Linux,Windows,MacOS) |
+| [Black-Tool](https://github.com/Black-Tool/Black-Tool) | v2.6.5 | (Linux,MacOS) |
 
 <br>
 </center>
