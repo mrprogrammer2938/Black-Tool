@@ -25,7 +25,7 @@ Black-Tool v5.5.5
 ```Black-Tool v5.5.5 (New)```
 <hr>
 
-[![Python 3.12](https://img.shields.io/badge/Python-3.10-yellow.svg)](https://www.python.org/downloads/)  
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-yellow.svg)](https://www.python.org/downloads/)  
 
 #### Install the tools and start hacking Attack!
 
