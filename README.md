@@ -62,7 +62,9 @@ Link | Version | Suport
 ## Scr
 <br>
 
-[![Black-Tool-Screen](https://user-images.githubusercontent.com/78996423/132674185-03d48566-aefe-4039-ae91-a4bfa3374ad6.jpeg)](https://github.com/mrprogrammer2938/Black-Tool)
+[![Black-Tool-Screen](https://github.com/mrprogrammer2938/Black-Tool/blob/master/Scr/black-tool-scr.png)](https://github.com/mrprogrammer2938/Black-Tool)
+
+[![Black-Tool-Screen2](https://github.com/mrprogrammer2938/Black-Tool/blob/master/Scr/black-tool-scr-2.png)](https://github.com/mrprogrammer2938/Black-Tool)
 
 <br>
 
